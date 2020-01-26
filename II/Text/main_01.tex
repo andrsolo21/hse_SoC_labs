@@ -1,0 +1,125 @@
+%!TEX TS-program = xelatex
+
+% Шаблон документа LaTeX создан в 2018 году
+% Алексеем Подчезерцевым
+% В качестве исходных использованы шаблоны
+% 	Данилом Фёдоровых (danil@fedorovykh.ru) 
+%		https://www.writelatex.com/coursera/latex/5.2.2
+%	LaTeX-шаблон для русской кандидатской диссертации и её автореферата.
+%		https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template
+
+\documentclass[a4paper,14pt]{article}
+
+\input{data/preambular.tex}
+\begin{document} % конец преамбулы, начало документа
+\input{data/title_01.tex}
+\tableofcontents
+\pagebreak
+
+\section{Задание}
+
+Составить схему указанного выражения в базисе И, ИЛИ, НЕ.
+Построить временную диаграмму и выполнить моделирование в режимах
+Functional и Time. Оценить аппаратные ресурсы на реализацию схемы и
+обосновать полученный результат. Упростить заданное логическое
+выражение с помощью алгебры логики. Сравнить работу двух схем.
+Запрограммировать учебную плату и продемонстрировать результаты
+работы на макете (Часть 2).
+
+13 Вариант
+$$y =  !(x_1 U !(!x_1 \& !x_2))$$
+
+\section{Выполнение работы}
+
+Создаем проект.
+
+Далее создадим блок схему:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/01_01}
+	\caption{Блок схема}
+	\label{fig:0101}
+\end{figure}
+
+Таблица истинности:
+
+\begin{table}[H]
+	\caption{Таблица истинности}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$x_1$ & $x_2$ & $y$ \\ \hline
+		0    & 0    & 1 \\ \hline
+		0    & 1    & 0 \\ \hline
+		1    & 0    & 0 \\ \hline
+		1    & 1    & 0 \\ \hline
+	\end{tabular}
+\end{table}
+
+Компилируем проект:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/01_02}
+	\caption{Результат компиляции}
+	\label{fig:0102}
+\end{figure}
+
+Назначим пины:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/01_03}
+	\caption{Назначенные пины}
+	\label{fig:0103}
+\end{figure}
+
+И проведем симуляцию:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/01_04}
+	\caption{Временные диаграммы}
+	\label{fig:0104}
+\end{figure}
+
+Упростим логическое выражение:
+
+$ !(x_1 U !(!x_1 \& !x_2)) = !(x_1 U x_1 U x_2) =  !(x_1 U x_2)$
+
+$$ y =  !(x_1 U x_2)$$
+ 
+Добавим к существующей схеме выход, соответствующий упрощенной функции(LEDR1).
+ 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/01_07}
+	\caption{Блок схема выражения}
+	\label{fig:0107}
+\end{figure}
+
+Новая временная диаграмма выглядит следующим образом:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/01_06}
+	\caption{Временная диаграмма с упрощенной функцией}
+	\label{fig:0106}
+\end{figure}
+
+ 
+\section{Вывод}
+В ходе проделанной работы были построены логические блок схемы в базисе И, ИЛИ, НЕ, а также временные диаграммы полученных функций. Оценены аппаратные ресурсы схемы.
+
+
+\newpage 
+\renewcommand{\refname}{{\normalsize СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}} 
+\centering 
+\begin{thebibliography}{9} 
+	\addcontentsline{toc}{section}{\refname} 
+	\bibitem{sql} Vijayakumar P., Vijayalakshmi V., Zayaraz G. Comparative study of hyperelliptic curve cryptosystem over prime field and its survey //International Journal of Hybrid Information Technology. – 2014. – Т. 7. – №. 1. – С. 137-146.
+	\bibitem{sql} Антонов А., Филиппов А., Золотухо Р. Средства системной отладки САПР Quartus II //Компоненты и технологии. – 2008. – №. 89.
+\end{thebibliography}
+
+\end{document} % конец документа

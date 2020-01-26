@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/repos/hse_SoC_labs/II/Lab1/simulation/qsim
+vhard_block
+Z1 !s110 1580083067
+!i10b 1
+!s100 :_TiT6Z7l;MgCPlSWe@Sn0
+IYPR?UTJd93IDR@@Zl[1590
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1580083066
+Z4 8Lab1.vo
+Z5 FLab1.vo
+L0 246
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1580083067.000000
+Z8 !s107 Lab1.vo|
+Z9 !s90 -work|work|Lab1.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vLab1
+R1
+!i10b 1
+!s100 nNE]ThUW`EzJB6b8<5N332
+IfGW`__eW4^hc0I3EZOFmf1
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@lab1
+vLab1_vlg_vec_tst
+R1
+!i10b 1
+!s100 gmQIA>8f_jWNehlJOUdIN0
+I;khm^E;4C_DJn29;`^YBL1
+R2
+R0
+w1580083064
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@lab1_vlg_vec_tst
