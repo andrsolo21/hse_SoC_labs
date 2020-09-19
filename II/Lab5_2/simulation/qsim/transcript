@@ -1,0 +1,53 @@
+# do try2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:30 on May 07,2020
+# vlog -work work try2.vo 
+# -- Compiling module dop
+# 
+# Top level modules:
+# 	dop
+# End time: 23:06:30 on May 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:30 on May 07,2020
+# vlog -work work Waveform1.vwf.vt 
+# -- Compiling module dop_vlg_vec_tst
+# 
+# Top level modules:
+# 	dop_vlg_vec_tst
+# End time: 23:06:30 on May 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.dop_vlg_vec_tst 
+# Start time: 23:06:31 on May 07,2020
+# Loading work.dop_vlg_vec_tst
+# Loading work.dop
+# Loading altera_ver.dffeas
+# Loading sv_std.std
+# Loading altera_lnsim_ver.generic_m10k
+# Loading altera_lnsim_ver.altera_lnsim_functions
+# Loading altera_lnsim_ver.common_28nm_ram_block
+# Loading altera_lnsim_ver.common_28nm_ram_register
+# Loading altera_lnsim_ver.common_28nm_ram_pulse_generator
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (8) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac /<protected>/<protected> File: nofile
+# ** Warning: (vsim-3015) <protected>(<protected>): [PCDPC] - Port size (<protected>) does not match connection size (<protected>) for <protected>.<protected>
+#    Time: 0 ps  Iteration: 0  Protected: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac /<protected>/<protected> File: nofile
+# after#25
+# ** Note: $finish    : Waveform1.vwf.vt(50)
+#    Time: 1 us  Iteration: 0  Instance: /dop_vlg_vec_tst
+# End time: 23:06:33 on May 07,2020, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 8

@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ledr0",
+					"strict" : false
+				},
+				{
+					"name" : "ledr1",
+					"strict" : false
+				},
+				{
+					"name" : "ledr2",
+					"strict" : false
+				},
+				{
+					"name" : "ledr3",
+					"strict" : false
+				},
+				{
+					"name" : "x1",
+					"strict" : false
+				},
+				{
+					"name" : "x4",
+					"strict" : false
+				},
+				{
+					"name" : "x2",
+					"strict" : false
+				},
+				{
+					"name" : "x3",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_lai_0_0",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_lai_0_1",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_lai_0_2",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_lai_0_3",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_lai_0_4",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_lai_0_5",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_lai_0_6",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_lai_0_7",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

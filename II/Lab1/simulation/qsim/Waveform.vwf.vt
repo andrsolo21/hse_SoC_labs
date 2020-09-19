@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/27/2020 02:57:43"
+// Generated on "01/27/2020 15:53:49"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          Lab1
 // 
@@ -34,12 +34,28 @@ reg SW1;
 // wires                                               
 wire LEDR0;
 wire LEDR1;
+wire LEDR2;
+wire LEDR3;
+wire LEDR4;
+wire LEDR5;
+wire LEDR6;
+wire LEDR7;
+wire LEDR8;
+wire LEDR9;
 
 // assign statements (if any)                          
 Lab1 i1 (
 // port map - connection between master ports and signals/registers   
 	.LEDR0(LEDR0),
 	.LEDR1(LEDR1),
+	.LEDR2(LEDR2),
+	.LEDR3(LEDR3),
+	.LEDR4(LEDR4),
+	.LEDR5(LEDR5),
+	.LEDR6(LEDR6),
+	.LEDR7(LEDR7),
+	.LEDR8(LEDR8),
+	.LEDR9(LEDR9),
 	.SW0(SW0),
 	.SW1(SW1)
 );

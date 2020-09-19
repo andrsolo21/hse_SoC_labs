@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab1
-Mon Jan 27 02:40:18 2020
+Mon Jan 27 15:51:28 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 27 02:40:18 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 27 15:51:28 2020       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Lab1                                        ;
 ; Top-level Entity Name              ; Lab1                                        ;
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 ;     Total combinational functions  ; 1                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 4                                           ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -193,14 +193,14 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 4     ;
+; I/O pins                                    ; 12    ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; inst3 ;
-; Maximum fan-out                             ; 2     ;
-; Total fan-out                               ; 8     ;
-; Average fan-out                             ; 0.89  ;
+; Maximum fan-out                             ; 5     ;
+; Total fan-out                               ; 19    ;
+; Average fan-out                             ; 0.76  ;
 +---------------------------------------------+-------+
 
 
@@ -209,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |Lab1                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |Lab1               ; Lab1        ; work         ;
+; |Lab1                      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |Lab1               ; Lab1        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -234,14 +234,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
+; boundary_port         ; 12                          ;
+; cycloneiii_lcell_comb ; 3                           ;
+;     normal            ; 3                           ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 2.00                        ;
+; Average LUT depth     ; 1.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -260,7 +261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Jan 27 02:39:58 2020
+    Info: Processing started: Mon Jan 27 15:51:05 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab1 -c Lab1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -269,17 +270,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file lab1.bd
 Info (12021): Found 1 design units, including 1 entities, in source file block2.bdf
     Info (12023): Found entity 1: Block2
 Info (12127): Elaborating entity "Lab1" for the top level hierarchy
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR1" is stuck at GND
+    Warning (13410): Pin "LEDR3" is stuck at GND
+    Warning (13410): Pin "LEDR5" is stuck at GND
+    Warning (13410): Pin "LEDR7" is stuck at GND
+    Warning (13410): Pin "LEDR9" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 2 output pins
+    Info (21059): Implemented 10 output pins
     Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4744 megabytes
-    Info: Processing ended: Mon Jan 27 02:40:18 2020
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:48
+    Info: Processing ended: Mon Jan 27 15:51:28 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:50
 
 

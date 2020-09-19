@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "m1",
+					"strict" : false
+				},
+				{
+					"name" : "m2",
+					"strict" : false
+				},
+				{
+					"name" : "m3",
+					"strict" : false
+				},
+				{
+					"name" : "m4",
+					"strict" : false
+				},
+				{
+					"name" : "m5",
+					"strict" : false
+				},
+				{
+					"name" : "m6",
+					"strict" : false
+				},
+				{
+					"name" : "m7",
+					"strict" : false
+				},
+				{
+					"name" : "m8",
+					"strict" : false
+				},
+				{
+					"name" : "m9",
+					"strict" : false
+				},
+				{
+					"name" : "m10",
+					"strict" : false
+				},
+				{
+					"name" : "dec_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dec_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "c",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

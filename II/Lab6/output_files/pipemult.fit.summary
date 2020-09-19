@@ -1,0 +1,12 @@
+I/O Assignment Analysis Status : Successful - Tue May 12 16:34:22 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : pipemult
+Top-level Entity Name : pipemult
+Family : MAX 10
+Device : 10M50DAF484C8GES
+Timing Models : Preliminary
+Total pins : 44 / 360 ( 12 % )
+Total virtual pins : 0
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

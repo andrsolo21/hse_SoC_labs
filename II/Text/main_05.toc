@@ -1,0 +1,18 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Цель работы}{3}{section.1}
+\contentsline {section}{\numberline {2}Задание}{3}{section.2}
+\contentsline {section}{\numberline {3}Часть 1. «Знакомство со средой проектирования Quartus II. Создание проекта»}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Создание проекта}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Разработка конвейерного умножителя}{5}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Создание умножителя 8х8 с помощью утилиты Mega Wizard\textregistered Plug-in Manager}{5}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Создание 32х16 RAM с помощью утилиты Mega Wizard\textregistered Plug-in Manager}{7}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Создание HEX файл с помощью редактора Memory Editor}{9}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Добавление блоков в проект и создание связей}{10}{subsubsection.3.2.4}
+\contentsline {section}{\numberline {4}Часть 2. «Моделирование проекта в среде Quartus II»}{10}{section.4}
+\contentsline {section}{\numberline {5}Часть 3. «Компиляция проекта в среде Quartus II. Анализ результатов компиляции»}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}Компиляция проекта}{11}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}RTL представление проекта}{12}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Редактор chip planner}{12}{subsection.5.3}
+\contentsline {section}{\numberline {6}Доп задание}{13}{section.6}
+\contentsline {section}{\numberline {7}Вывод}{14}{section.7}
+\contentsline {section}{{\relax \fontsize {14.4}{17}\selectfont \abovedisplayskip 14\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus4\p@ \belowdisplayshortskip 7\p@ plus4\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 6\p@ plus2.5\p@ minus\p@ \topsep 12\p@ plus5\p@ minus7\p@ \itemsep 6\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 6\p@ plus2.5\p@ minus\p@ \topsep 12\p@ plus5\p@ minus7\p@ \itemsep 6\p@ plus2.5\p@ minus\p@ СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}}{15}{section*.25}

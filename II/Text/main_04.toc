@@ -1,0 +1,11 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Цель работы}{3}{section.1}
+\contentsline {section}{\numberline {2}Задание}{3}{section.2}
+\contentsline {section}{\numberline {3}Выполнение работы}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Исследование сумматоров}{3}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Проектирование одноразрядного сумматора}{3}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Исследование работы двухразрядного сумматора}{6}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Исследование работы четырехразрядного сумматора}{7}{subsubsection.3.1.3}
+\contentsline {subsection}{\numberline {3.2}Исследование работы четырехразрядного вычитателя}{10}{subsection.3.2}
+\contentsline {section}{\numberline {4}Вывод}{13}{section.4}
+\contentsline {section}{{\relax \fontsize {14.4}{17}\selectfont \abovedisplayskip 14\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus4\p@ \belowdisplayshortskip 7\p@ plus4\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 6\p@ plus2.5\p@ minus\p@ \topsep 12\p@ plus5\p@ minus7\p@ \itemsep 6\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 6\p@ plus2.5\p@ minus\p@ \topsep 12\p@ plus5\p@ minus7\p@ \itemsep 6\p@ plus2.5\p@ minus\p@ СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}}{14}{section*.19}

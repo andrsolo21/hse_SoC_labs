@@ -1,0 +1,37 @@
+# do lab4.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:31:39 on Apr 26,2020
+# vlog -work work lab4.vo 
+# -- Compiling module vich4
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	vich4
+# End time: 16:31:39 on Apr 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:31:39 on Apr 26,2020
+# vlog -work work Waveform5.vwf.vt 
+# -- Compiling module vich4_vlg_vec_tst
+# 
+# Top level modules:
+# 	vich4_vlg_vec_tst
+# End time: 16:31:39 on Apr 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.vich4_vlg_vec_tst 
+# Start time: 16:31:40 on Apr 26,2020
+# Loading work.vich4_vlg_vec_tst
+# Loading work.vich4
+# Loading work.hard_block
+# ** Warning: (vsim-3017) lab4.vo(450): [TFMPC] - Too few port connections. Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /vich4_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: nofile
+# ** Warning: (vsim-3722) lab4.vo(450): [TFMPC] - Missing connection for port 'clk_dft'.
+# ** Warning: (vsim-3017) lab4.vo(473): [TFMPC] - Too few port connections. Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /vich4_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: nofile
+# ** Warning: (vsim-3722) lab4.vo(473): [TFMPC] - Missing connection for port 'clk_dft'.
+# after#26
+# ** Note: $finish    : Waveform5.vwf.vt(66)
+#    Time: 1 us  Iteration: 0  Instance: /vich4_vlg_vec_tst
+# End time: 16:31:40 on Apr 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4

@@ -1,0 +1,73 @@
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# File: D:\repos\hse_SoC_labs\II\Lab6\lab6.csv
+# Generated on: Tue May 12 16:40:24 2020
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clk,Input,PIN_P11,3,B3_N0,PIN_P11,1.8 V,,,,,
+dataa[7],Input,PIN_N2,2,B2_N0,PIN_N2,2.5 V,,,,,
+dataa[6],Input,PIN_M9,2,B2_N0,PIN_M9,2.5 V,,,,,
+dataa[5],Input,PIN_N3,2,B2_N0,PIN_N3,2.5 V,,,,,
+dataa[4],Input,PIN_M8,2,B2_N0,PIN_M8,2.5 V,,,,,
+dataa[3],Input,PIN_P5,2,B2_N0,PIN_P5,2.5 V,,,,,
+dataa[2],Input,PIN_N5,2,B2_N0,PIN_N5,2.5 V,,,,,
+dataa[1],Input,PIN_P4,2,B2_N0,PIN_P4,2.5 V,,,,,
+dataa[0],Input,PIN_N4,2,B2_N0,PIN_N4,2.5 V,,,,,
+datab[7],Input,PIN_N8,2,B2_N0,PIN_N8,2.5 V,,,,,
+datab[6],Input,PIN_T2,2,B2_N0,PIN_T2,2.5 V,,,,,
+datab[5],Input,PIN_R5,2,B2_N0,PIN_R5,2.5 V,,,,,
+datab[4],Input,PIN_T1,2,B2_N0,PIN_T1,2.5 V,,,,,
+datab[3],Input,PIN_R4,2,B2_N0,PIN_R4,2.5 V,,,,,
+datab[2],Input,PIN_M1,2,B2_N0,PIN_M1,2.5 V,,,,,
+datab[1],Input,PIN_R3,2,B2_N0,PIN_R3,2.5 V,,,,,
+datab[0],Input,PIN_P3,2,B2_N0,PIN_P3,2.5 V,,,,,
+q[15],Output,PIN_W5,3,B3_N0,PIN_W5,1.8 V,,,,,
+q[14],Output,PIN_V4,3,B3_N0,PIN_V4,1.8 V,,,,,
+q[13],Output,PIN_W6,3,B3_N0,PIN_W6,1.8 V,,,,,
+q[12],Output,PIN_V5,3,B3_N0,PIN_V5,1.8 V,,,,,
+q[11],Output,PIN_U6,3,B3_N0,PIN_U6,1.8 V,,,,,
+q[10],Output,PIN_Y1,3,B3_N0,PIN_Y1,1.8 V,,,,,
+q[9],Output,PIN_U7,3,B3_N0,PIN_U7,1.8 V,,,,,
+q[8],Output,PIN_Y2,3,B3_N0,PIN_Y2,1.8 V,,,,,
+q[7],Output,PIN_W4,3,B3_N0,PIN_W4,1.8 V,,,,,
+q[6],Output,PIN_AA1,3,B3_N0,PIN_AA1,1.8 V,,,,,
+q[5],Output,PIN_W3,3,B3_N0,PIN_W3,1.8 V,,,,,
+q[4],Output,PIN_AA2,3,B3_N0,PIN_AA2,1.8 V,,,,,
+q[3],Output,PIN_V7,3,B3_N0,PIN_V7,1.8 V,,,,,
+q[2],Output,PIN_Y5,3,B3_N0,PIN_Y5,1.8 V,,,,,
+q[1],Output,PIN_V8,3,B3_N0,PIN_V8,1.8 V,,,,,
+q[0],Output,PIN_Y6,3,B3_N0,PIN_Y6,1.8 V,,,,,
+rdaddress[4],Input,PIN_W8,3,B3_N0,PIN_W8,1.8 V,,,,,
+rdaddress[3],Input,PIN_Y3,3,B3_N0,PIN_Y3,1.8 V,,,,,
+rdaddress[2],Input,PIN_W7,3,B3_N0,PIN_W7,1.8 V,,,,,
+rdaddress[1],Input,PIN_AB3,3,B3_N0,PIN_AB3,1.8 V,,,,,
+rdaddress[0],Input,PIN_W10,3,B3_N0,PIN_W10,1.8 V,,,,,
+wraddress[4],Input,PIN_AB2,3,B3_N0,PIN_AB2,1.8 V,,,,,
+wraddress[3],Input,PIN_W9,3,B3_N0,PIN_W9,1.8 V,,,,,
+wraddress[2],Input,PIN_Y8,3,B3_N0,PIN_Y8,1.8 V,,,,,
+wraddress[1],Input,PIN_P9,3,B3_N0,PIN_P9,1.8 V,,,,,
+wraddress[0],Input,PIN_Y7,3,B3_N0,PIN_Y7,1.8 V,,,,,
+wren,Input,PIN_R9,3,B3_N0,PIN_R9,1.8 V,,,,,
+~ALTERA_TMS~,Input,PIN_H2,1B,B1_N0,PIN_H2,,,,,,
+~ALTERA_TCK~,Input,PIN_G2,1B,B1_N0,PIN_G2,,,,,,
+~ALTERA_TDI~,Input,PIN_L4,1B,B1_N0,PIN_L4,,,,,,
+~ALTERA_TDO~,Output,PIN_M5,1B,B1_N0,PIN_M5,,,,,,
+~ALTERA_CONFIG_SEL~,Input,PIN_H10,8,B8_N0,PIN_H10,,,,,,
+~ALTERA_nCONFIG~,Input,PIN_H9,8,B8_N0,PIN_H9,,,,,,
+~ALTERA_nSTATUS~,Input,PIN_G9,8,B8_N0,PIN_G9,,,,,,
+~ALTERA_CONF_DONE~,Input,PIN_F8,8,B8_N0,PIN_F8,,,,,,

@@ -1,0 +1,18 @@
+Fitter Status : Successful - Sun May 10 19:19:21 2020
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : lab07
+Top-level Entity Name : for_sh
+Family : MAX 10
+Device : 10M40DAF484C7G
+Timing Models : Final
+Total logic elements : 27 / 40,368 ( < 1 % )
+    Total combinational functions : 27 / 40,368 ( < 1 % )
+    Dedicated logic registers : 24 / 40,368 ( < 1 % )
+Total registers : 24
+Total pins : 11 / 360 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 16 / 1,290,240 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 250 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

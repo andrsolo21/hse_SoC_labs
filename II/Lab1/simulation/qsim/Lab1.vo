@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
-// DATE "01/27/2020 02:57:46"
+// DATE "01/27/2020 15:53:51"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -32,15 +32,39 @@ module Lab1 (
 	LEDR0,
 	SW1,
 	SW0,
-	LEDR1);
+	LEDR2,
+	LEDR4,
+	LEDR6,
+	LEDR8,
+	LEDR1,
+	LEDR3,
+	LEDR5,
+	LEDR7,
+	LEDR9);
 output 	LEDR0;
 input 	SW1;
 input 	SW0;
+output 	LEDR2;
+output 	LEDR4;
+output 	LEDR6;
+output 	LEDR8;
 output 	LEDR1;
+output 	LEDR3;
+output 	LEDR5;
+output 	LEDR7;
+output 	LEDR9;
 
 // Design Ports Information
 // LEDR0	=>  Location: PIN_A8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
-// LEDR1	=>  Location: PIN_C8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDR2	=>  Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// LEDR4	=>  Location: PIN_D13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// LEDR6	=>  Location: PIN_E14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// LEDR8	=>  Location: PIN_A11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// LEDR1	=>  Location: PIN_A9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// LEDR3	=>  Location: PIN_B10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// LEDR5	=>  Location: PIN_C13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// LEDR7	=>  Location: PIN_D14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
+// LEDR9	=>  Location: PIN_B11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 8mA
 // SW1	=>  Location: PIN_C11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 // SW0	=>  Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
@@ -61,7 +85,15 @@ wire \~QUARTUS_CREATED_UNVM~~busy ;
 wire \~QUARTUS_CREATED_ADC1~~eoc ;
 wire \~QUARTUS_CREATED_ADC2~~eoc ;
 wire \LEDR0~output_o ;
+wire \LEDR2~output_o ;
+wire \LEDR4~output_o ;
+wire \LEDR6~output_o ;
+wire \LEDR8~output_o ;
 wire \LEDR1~output_o ;
+wire \LEDR3~output_o ;
+wire \LEDR5~output_o ;
+wire \LEDR7~output_o ;
+wire \LEDR9~output_o ;
 wire \SW1~input_o ;
 wire \SW0~input_o ;
 wire \inst3~combout ;
@@ -72,7 +104,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: LCCOMB_X44_Y42_N8
+// Location: LCCOMB_X44_Y41_N8
 fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 // \~QUARTUS_CREATED_GND~I_combout  = GND
@@ -102,9 +134,61 @@ defparam \LEDR0~output .bus_hold = "false";
 defparam \LEDR0~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X36_Y39_N30
-fiftyfivenm_io_obuf \LEDR1~output (
+// Location: IOOBUF_X51_Y54_N16
+fiftyfivenm_io_obuf \LEDR2~output (
 	.i(!\inst3~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LEDR2~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LEDR2~output .bus_hold = "false";
+defparam \LEDR2~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X56_Y54_N30
+fiftyfivenm_io_obuf \LEDR4~output (
+	.i(!\inst3~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LEDR4~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LEDR4~output .bus_hold = "false";
+defparam \LEDR4~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X66_Y54_N23
+fiftyfivenm_io_obuf \LEDR6~output (
+	.i(!\inst3~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LEDR6~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LEDR6~output .bus_hold = "false";
+defparam \LEDR6~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X51_Y54_N9
+fiftyfivenm_io_obuf \LEDR8~output (
+	.i(!\inst3~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LEDR8~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LEDR8~output .bus_hold = "false";
+defparam \LEDR8~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y54_N23
+fiftyfivenm_io_obuf \LEDR1~output (
+	.i(gnd),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -113,6 +197,58 @@ fiftyfivenm_io_obuf \LEDR1~output (
 // synopsys translate_off
 defparam \LEDR1~output .bus_hold = "false";
 defparam \LEDR1~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y54_N9
+fiftyfivenm_io_obuf \LEDR3~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LEDR3~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LEDR3~output .bus_hold = "false";
+defparam \LEDR3~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y54_N23
+fiftyfivenm_io_obuf \LEDR5~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LEDR5~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LEDR5~output .bus_hold = "false";
+defparam \LEDR5~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X56_Y54_N9
+fiftyfivenm_io_obuf \LEDR7~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LEDR7~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LEDR7~output .bus_hold = "false";
+defparam \LEDR7~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y54_N9
+fiftyfivenm_io_obuf \LEDR9~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\LEDR9~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \LEDR9~output .bus_hold = "false";
+defparam \LEDR9~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOIBUF_X51_Y54_N22
@@ -139,7 +275,7 @@ defparam \SW0~input .listen_to_nsleep_signal = "false";
 defparam \SW0~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X51_Y53_N16
+// Location: LCCOMB_X51_Y53_N8
 fiftyfivenm_lcell_comb inst3(
 // Equation(s):
 // \inst3~combout  = (\SW1~input_o ) # (\SW0~input_o )
@@ -239,7 +375,23 @@ defparam \~QUARTUS_CREATED_ADC2~ .tsclksel = 0;
 
 assign LEDR0 = \LEDR0~output_o ;
 
+assign LEDR2 = \LEDR2~output_o ;
+
+assign LEDR4 = \LEDR4~output_o ;
+
+assign LEDR6 = \LEDR6~output_o ;
+
+assign LEDR8 = \LEDR8~output_o ;
+
 assign LEDR1 = \LEDR1~output_o ;
+
+assign LEDR3 = \LEDR3~output_o ;
+
+assign LEDR5 = \LEDR5~output_o ;
+
+assign LEDR7 = \LEDR7~output_o ;
+
+assign LEDR9 = \LEDR9~output_o ;
 
 endmodule
 

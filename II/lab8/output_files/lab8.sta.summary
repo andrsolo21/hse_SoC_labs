@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'c'
+Slack : -6.575
+TNS   : -175.609
+
+Type  : Slow 1200mV 85C Model Setup 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : -1.715
+TNS   : -14.867
+
+Type  : Slow 1200mV 85C Model Setup 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'c'
+Slack : 0.625
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'c'
+Slack : -3.000
+TNS   : -45.090
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : -1.403
+TNS   : -18.746
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Slow 1200mV 0C Model Setup 'c'
+Slack : -5.991
+TNS   : -161.055
+
+Type  : Slow 1200mV 0C Model Setup 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : -1.472
+TNS   : -12.411
+
+Type  : Slow 1200mV 0C Model Setup 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'c'
+Slack : 0.578
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'c'
+Slack : -3.000
+TNS   : -45.090
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : -1.403
+TNS   : -18.214
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Fast 1200mV 0C Model Setup 'c'
+Slack : -2.433
+TNS   : -60.418
+
+Type  : Fast 1200mV 0C Model Setup 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : -1.051
+TNS   : -7.111
+
+Type  : Fast 1200mV 0C Model Setup 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : 0.694
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'c'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'c'
+Slack : -3.000
+TNS   : -40.720
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated|counter_reg_bit[10]'
+Slack : -1.000
+TNS   : -12.833
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

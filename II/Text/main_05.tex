@@ -1,0 +1,303 @@
+%!TEX TS-program = xelatex
+
+% Шаблон документа LaTeX создан в 2018 году
+% Алексеем Подчезерцевым
+% В качестве исходных использованы шаблоны
+% 	Данилом Фёдоровых (danil@fedorovykh.ru) 
+%		https://www.writelatex.com/coursera/latex/5.2.2
+%	LaTeX-шаблон для русской кандидатской диссертации и её автореферата.
+%		https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template
+
+\documentclass[a4paper,14pt]{article}
+
+\input{data/preambular.tex}
+\begin{document} % конец преамбулы, начало документа
+\input{data/title_05.tex}
+\tableofcontents
+\pagebreak
+
+\section{Цель работы}
+
+Моделирование работы дешифратора, изучение карт Карно.
+
+\section{Задание}
+
+\begin{enumerate}
+\item Выполнить действия, описанный в практической работе 5 -- Часть 1, 2, 3;
+
+\item Оформить отчет, который должен включать: титульный лист, введение и постановку задачи, тему работы, описание всех этапов выполнения проекта, скриншоты (рисунки с подрисуночными подписями) ключевых моментов, выводы;
+
+\item Изменить схему устройства добавив собственный блок памяти.
+Объяснить работу устройства;
+
+\item Изменить схему устройства добавив арифметический блок.
+Объяснить работу устройства.
+
+\end{enumerate}
+
+\section{Часть 1. «Знакомство со средой проектирования Quartus II. Создание проекта»}
+
+\subsection{Создание проекта}
+
+Для начала необходимо открыть Quartus, открываем его.
+
+Далее заходим в меню File и выбираем New Project Wizard.
+В открывшемся окне жмем Next, в следующем выбираем директорию для проекта и вводим имя проекта, жмем 2 раза Next.
+
+В следующем окне выбираем все как на рис. \ref{fig:screenshot42} и жмем далее 2 раза.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/Screenshot_42}
+	\caption{Создание нового проекта}
+	\label{fig:screenshot42}
+\end{figure}
+
+На последнем шаге должны получится значения как на рис. \ref{fig:screenshot43}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/Screenshot_43}
+	\caption{}
+	\label{fig:screenshot43}
+\end{figure}
+
+\subsection{Разработка конвейерного умножителя}
+
+\subsubsection{Создание умножителя 8х8 с помощью утилиты Mega Wizard\textregistered  Plug-in Manager}
+
+Для создания необходимо в меню выбрать Tools > Mega Wizard  Plug-in Manager, в открывшемся окне выбираем опцию Create a new custom megafunction variation. Далее в папке Arithmetics выбираем LPM\_MULT (рис. \ref{fig:screenshot412}). Семейство микросхем выбираем Cyclone II.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/Screenshot_412}
+	\caption{Создание мегафункции}
+	\label{fig:screenshot412}
+\end{figure}
+
+Поля dataa и datab на рис. \ref{fig:screenshot002} оставляем по 8 бит. Жмем next 2 раза.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot002}
+	\caption{Создание мегафункци}
+	\label{fig:screenshot002}
+\end{figure}
+
+Далее в первом окне выбираем yes и вводим число 2 (рис. \ref{fig:screenshot003}), нажимаем next 2 раза.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot003}
+	\caption{Создание мегафункци}
+	\label{fig:screenshot003}
+\end{figure}
+
+На текущем окне (рис. \ref{fig:screenshot423}) выбираем все в соответствии с рисунком и жмем на finish. После этого мегафункция готова.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/Screenshot_423}
+	\caption{Создание мегафункци}
+	\label{fig:screenshot423}
+\end{figure}
+
+\subsubsection{Создание 32х16 RAM с помощью утилиты Mega Wizard\textregistered  Plug-in Manager}
+
+Для создания необходимо в меню выбрать Tools > Mega Wizard  Plug-in Manager, в открывшемся окне выбираем опцию Create a new custom megafunction variation. Далее в папке Memory Compiler выбираем RAM: 2-PORT (рис. \ref{fig:screenshot004}). Семейство микросхем выбираем Cyclone II.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot004}
+	\caption{Создание мегафункци RAM}
+	\label{fig:screenshot004}
+\end{figure}
+
+На следующей странице ничего не нажимаем, жмем только на next.
+
+На странице Widths/Blk Type необходимо установить разрядность входного порта data\_a 16 bit (рис. \ref{fig:screenshot005}). После этого жмем Next 2 раза.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot005}
+	\caption{Создание мегафункци RAM}
+	\label{fig:screenshot005}
+\end{figure}
+
+На странице Regs/Clkens/Aclrs отключем опцию Read output port(s) 'q' (рис. \ref{fig:screenshot006}). Больше ничего не трогаем, жмем Next 2 раза.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot006}
+	\caption{Создание мегафункци RAM}
+	\label{fig:screenshot006}
+\end{figure}
+
+На странице Mem Init выбираем yes и указываем имя файла ram.hex (рис. \ref{fig:screenshot007}). После этого жмем Next.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot007}
+	\caption{Создание мегафункци RAM}
+	\label{fig:screenshot007}
+\end{figure}
+
+Последние шаги совпадают с шагами для создания умножителя.
+
+\subsubsection{Создание HEX файл с помощью редактора Memory Editor}
+
+Вменю File выбираем команду New, в открывшемся окне выбираем Other Files и выбираем Hexadecimal (Intel-Format) File. В открытом окне вводим 32 и 16.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{image/lab5/screenshot008}
+	\caption{Создание HEX файла}
+	\label{fig:screenshot008}
+\end{figure}
+
+Получаем следующий файл рис. \ref{fig:screenshot009}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot012}
+	\caption{HEX файл}
+	\label{fig:screenshot012}
+\end{figure}
+
+
+Заполняем файл при помощи функции Custom Fill Cells.
+
+\subsubsection{Добавление блоков в проект и создание связей}
+
+Создаем схему и подтягиваем туда созданные ранее мегафункции (рис. \ref{fig:screenshot011}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{image/lab5/screenshot011}
+	\caption{Итоговая схема}
+	\label{fig:screenshot011}
+\end{figure}
+
+\section{Часть 2. «Моделирование проекта в среде Quartus II»}
+
+Создадим модуляцию проекта при помощи University Program VWF. 
+
+Добавим пины: clk, wren, data, datab, rdaddres, wraddres, q.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{image/lab5/screenshot013}
+	\caption{Результат модуляции проекта}
+	\label{fig:screenshot013}
+\end{figure}
+
+\section{Часть 3. «Компиляция проекта в среде Quartus II. Анализ результатов компиляции»}
+
+\subsection{Компиляция проекта}
+
+Скомпилируем проект, результат компиляции  представлен на рис. \ref{fig:screenshot014}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot014}
+	\caption{Результаты компиляции проекта}
+	\label{fig:screenshot014}
+\end{figure}
+
+\subsection{RTL представление проекта}
+
+На рис. \ref{fig:screenshot015} RTL представление проекта.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot015}
+	\caption{RTL представление}
+	\label{fig:screenshot015}
+\end{figure}
+
+Внутренности ram (рис. \ref{fig:screenshot016}), внутри он состоит из 16 однобитных регистров.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot016}
+	\caption{Внутренности ram}
+	\label{fig:screenshot016}
+\end{figure}
+
+\subsection{Редактор chip planner}
+
+Нажмем правой кнопкой на элемент однобитного элемента ram, далее Locate Node -> Locate in Chip planner. 
+Результат представлен на рис. \ref{fig:screenshot017}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot017}
+	\caption{Отображение связей элемента}
+	\label{fig:screenshot017}
+\end{figure}
+
+\section{Доп задание}
+
+Изменим схему, вместо первого числа поставим счетчик, а вместо двухпортовой памяти поставим однопортовую (рис. \ref{fig:screenshot018}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot018}
+	\caption{Блок схема доп задания}
+	\label{fig:screenshot018}
+\end{figure}
+
+Результаты компиляции проекта (рис. \ref{fig:screenshot021})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot021}
+	\caption{Результат компиляции доп задания}
+	\label{fig:screenshot021}
+\end{figure}
+
+
+Временная диаграмма доп задания (рис. \ref{fig:screenshot019}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot019}
+	\caption{WVF диаграмма}
+	\label{fig:screenshot019}
+\end{figure}
+
+RTL представление доп задания (рис. \ref{fig:screenshot020}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot020}
+	\caption{RTL представление}
+	\label{fig:screenshot020}
+\end{figure}
+
+Связи на Chip Planner (рис. \ref{fig:screenshot022}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab5/screenshot022}
+	\caption{Отображение связей элемента}
+	\label{fig:screenshot022}
+\end{figure}
+
+
+\section{Вывод}
+В ходе проделанной работы было создано 2 проекта арифметических устройств с памятью.
+
+Были созданы мегафункции умножителя, счетчика одно- и дву- портовые элементы памяти при помощи Mega Wizard  Plug-in Manager.
+
+Схема была протестированы при помощи WaveForm, были рассмотрены схемы, полученные при помощи Chip planner.
+\newpage 
+\renewcommand{\refname}{{\normalsize СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}} 
+\centering 
+\begin{thebibliography}{9} 
+	\addcontentsline{toc}{section}{\refname} 
+	\bibitem{sql} Vijayakumar P., Vijayalakshmi V., Zayaraz G. Comparative study of hyperelliptic curve cryptosystem over prime field and its survey //International Journal of Hybrid Information Technology. – 2014. – Т. 7. – №. 1. – С. 137-146.
+	\bibitem{sql} Антонов А., Филиппов А., Золотухо Р. Средства системной отладки САПР Quartus II //Компоненты и технологии. – 2008. – №. 89.
+\end{thebibliography}
+
+\end{document} % конец документа

@@ -1,0 +1,94 @@
+--parallel_add DEVICE_FAMILY="MAX 10" MSW_SUBTRACT="NO" PIPELINE=0 REPRESENTATION="UNSIGNED" RESULT_ALIGNMENT="LSB" SHIFT=0 SIZE=8 WIDTH=8 WIDTHR=8 data result
+--VERSION_BEGIN 17.1 cbx_cycloneii 2017:10:25:18:06:53:SJ cbx_lpm_add_sub 2017:10:25:18:06:53:SJ cbx_mgl 2017:10:25:18:08:29:SJ cbx_nadder 2017:10:25:18:06:53:SJ cbx_padd 2017:10:25:18:06:53:SJ cbx_parallel_add 2017:10:25:18:06:53:SJ cbx_stratix 2017:10:25:18:06:53:SJ cbx_stratixii 2017:10:25:18:06:53:SJ cbx_util_mgl 2017:10:25:18:06:53:SJ  VERSION_END
+
+
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+--  Your use of Intel Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Intel Program License 
+--  Subscription Agreement, the Intel Quartus Prime License Agreement,
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details.
+
+
+FUNCTION soft (in)
+RETURNS ( out);
+
+--synthesis_resources = lut 67 
+SUBDESIGN par_add_d7e
+( 
+	data[63..0]	:	input;
+	result[7..0]	:	output;
+) 
+VARIABLE
+	add1_result[8..0]	:	WIRE;
+	add13_result[8..0]	:	WIRE;
+	add17_result[8..0]	:	WIRE;
+	add21_result[9..0]	:	WIRE;
+	add25_result[10..0]	:	WIRE;
+	add5_result[8..0]	:	WIRE;
+	add9_result[9..0]	:	WIRE;
+	sft10a[9..0] : soft;
+	sft11a[9..0] : soft;
+	sft12a[9..0] : soft;
+	sft14a[8..0] : soft;
+	sft15a[8..0] : soft;
+	sft16a[8..0] : soft;
+	sft18a[8..0] : soft;
+	sft19a[8..0] : soft;
+	sft20a[8..0] : soft;
+	sft22a[9..0] : soft;
+	sft23a[9..0] : soft;
+	sft24a[9..0] : soft;
+	sft26a[10..0] : soft;
+	sft27a[10..0] : soft;
+	sft28a[10..0] : soft;
+	sft2a[8..0] : soft;
+	sft3a[8..0] : soft;
+	sft4a[8..0] : soft;
+	sft6a[8..0] : soft;
+	sft7a[8..0] : soft;
+	sft8a[8..0] : soft;
+	w156w	: WIRE;
+	w336w[10..0]	: WIRE;
+
+BEGIN 
+	add1_result[] = sft2a[].out + sft3a[].out;
+	add13_result[] = sft14a[].out + sft15a[].out;
+	add17_result[] = sft18a[].out + sft19a[].out;
+	add21_result[] = sft22a[].out + sft23a[].out;
+	add25_result[] = sft26a[].out + sft27a[].out;
+	add5_result[] = sft6a[].out + sft7a[].out;
+	add9_result[] = sft10a[].out + sft11a[].out;
+	sft10a[].in = ( w156w, ( sft4a[8..8].out, ( sft4a[7..7].out, ( sft4a[6..6].out, ( sft4a[5..5].out, ( sft4a[4..4].out, ( sft4a[3..3].out, ( sft4a[2..2].out, ( sft4a[1..1].out, sft4a[0..0].out)))))))));
+	sft11a[].in = ( w156w, ( sft16a[8..8].out, ( sft8a[7..7].out, ( sft8a[6..6].out, ( sft8a[5..5].out, ( sft8a[4..4].out, ( sft8a[3..3].out, ( sft8a[2..2].out, ( sft8a[1..1].out, sft8a[0..0].out)))))))));
+	sft12a[].in = add9_result[];
+	sft14a[].in = ( w156w, ( data[47..47], ( data[46..46], ( data[45..45], ( data[44..44], ( data[43..43], ( data[42..42], ( data[41..40]))))))));
+	sft15a[].in = ( w156w, ( data[7..7], ( data[6..6], ( data[5..5], ( data[4..4], ( data[3..3], ( data[2..2], ( data[1..0]))))))));
+	sft16a[].in = add13_result[];
+	sft18a[].in = ( w156w, ( data[63..63], ( data[62..62], ( data[61..61], ( data[60..60], ( data[59..59], ( data[58..58], ( data[57..56]))))))));
+	sft19a[].in = ( w156w, ( data[31..31], ( data[30..30], ( data[29..29], ( data[28..28], ( data[27..27], ( data[26..26], ( data[25..24]))))))));
+	sft20a[].in = add17_result[];
+	sft22a[].in = ( w156w, ( sft8a[8..8].out, ( sft16a[7..7].out, ( sft16a[6..6].out, ( sft16a[5..5].out, ( sft16a[4..4].out, ( sft16a[3..3].out, ( sft16a[2..2].out, ( sft16a[1..1].out, sft16a[0..0].out)))))))));
+	sft23a[].in = ( w156w, ( sft20a[8..8].out, ( sft20a[7..7].out, ( sft20a[6..6].out, ( sft20a[5..5].out, ( sft20a[4..4].out, ( sft20a[3..3].out, ( sft20a[2..2].out, ( sft20a[1..1].out, sft20a[0..0].out)))))))));
+	sft24a[].in = add21_result[];
+	sft26a[].in = ( w156w, ( sft12a[9..9].out, ( sft12a[8..8].out, ( sft12a[7..7].out, ( sft12a[6..6].out, ( sft12a[5..5].out, ( sft12a[4..4].out, ( sft12a[3..3].out, ( sft12a[2..2].out, ( sft12a[1..1].out, sft12a[0..0].out))))))))));
+	sft27a[].in = ( w156w, ( sft24a[9..9].out, ( sft24a[8..8].out, ( sft24a[7..7].out, ( sft24a[6..6].out, ( sft24a[5..5].out, ( sft24a[4..4].out, ( sft24a[3..3].out, ( sft24a[2..2].out, ( sft24a[1..1].out, sft24a[0..0].out))))))))));
+	sft28a[].in = add25_result[];
+	sft2a[].in = ( w156w, ( data[39..39], ( data[38..38], ( data[37..37], ( data[36..36], ( data[35..35], ( data[34..34], ( data[33..32]))))))));
+	sft3a[].in = ( w156w, ( data[15..15], ( data[14..14], ( data[13..13], ( data[12..12], ( data[11..11], ( data[10..10], ( data[9..8]))))))));
+	sft4a[].in = add1_result[];
+	sft6a[].in = ( w156w, ( data[55..55], ( data[54..54], ( data[53..53], ( data[52..52], ( data[51..51], ( data[50..50], ( data[49..48]))))))));
+	sft7a[].in = ( w156w, ( data[23..23], ( data[22..22], ( data[21..21], ( data[20..20], ( data[19..19], ( data[18..18], ( data[17..16]))))))));
+	sft8a[].in = add5_result[];
+	result[7..0] = w336w[7..0];
+	w156w = B"0";
+	w336w[] = ( sft28a[10..9].out, sft28a[8..7].out, sft28a[6..5].out, sft28a[4..3].out, sft28a[2..1].out, sft28a[0..0].out);
+END;
+--VALID FILE

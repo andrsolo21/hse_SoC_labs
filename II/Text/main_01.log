@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.9.8)  27 JAN 2020 02:57
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.9.8)  27 JAN 2020 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1918,45 +1918,45 @@ Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 19.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 19.
-LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 30.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 36.
 File: image/01_01.png Graphic file (type bmp)
 <image/01_01.png>
 File: image/01_02.png Graphic file (type bmp)
 <image/01_02.png>
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 72.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 72.
+ [3]
 File: image/01_03.png Graphic file (type bmp)
 <image/01_03.png>
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 77.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 77.
- [3]
 File: image/01_04.png Graphic file (type bmp)
 <image/01_04.png>
 File: image/01_07.png Graphic file (type bmp)
 <image/01_07.png>
 File: image/01_06.png Graphic file (type bmp)
 <image/01_06.png>
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 112.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 112.
 Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 114.
 Package babel Info: Redefining russian shorthand "~
@@ -1971,16 +1971,20 @@ Package babel Info: Redefining russian shorthand "|
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 116.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 116.
- [5]
+(babel)             in language  on input line 120.
 Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 120.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 120.
+ [5]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 124.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 124.
 
-Underfull \hbox (badness 1102) in paragraph at lines 122--123
+Underfull \hbox (badness 1102) in paragraph at lines 126--127
 []\TU/TimesNewRoman(0)/m/n/14.4 Антонов А., Филиппов А., Золотухо Р. Средства с
 истемной отладки САПР
  []
@@ -1988,26 +1992,32 @@ Underfull \hbox (badness 1102) in paragraph at lines 122--123
 
 AED: lastpage setting LastPage
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 129.
 [6]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 125.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
+(babel)             in language  on input line 129.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
  (./main_01.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 125.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
-Package rerunfilecheck Info: File `main_01.out' has not changed.
-(rerunfilecheck)             Checksum: F529B536757343954BA337876618C315.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 129.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 
+
+Package rerunfilecheck Warning: File `main_01.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main_01.out':
+(rerunfilecheck)             Before: F529B536757343954BA337876618C315
+(rerunfilecheck)             After:  F5C02BC8615919DEAAB1A5C18BF0835D.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -2015,7 +2025,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  47430 strings out of 492962
  1044047 string characters out of 6136968
- 1286459 words of memory out of 5000000
+ 1286460 words of memory out of 5000000
  50733 multiletter control sequences out of 15000+600000
  535810 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

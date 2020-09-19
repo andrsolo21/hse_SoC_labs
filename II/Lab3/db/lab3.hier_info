@@ -1,0 +1,25 @@
+|lab3
+ledr0 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+pin_9 => inst.IN0
+pin_8 => inst.IN1
+pin_11 => inst4.IN0
+pin_5 => inst3.IN0
+pin_7 => inst.IN5
+pin_6 => inst.IN6
+pin_4 => inst1.IN0
+pin_10 => inst5.IN0
+pin_3 => inst.IN11
+pin_0 => inst10.IN0
+pin_2 => inst9.IN1
+pin_1 => inst2.IN0
+ledr1 <= <GND>
+ledr2 <= <GND>
+ledr3 <= <GND>
+ledr4 <= <GND>
+ledr5 <= <GND>
+ledr6 <= <GND>
+ledr7 <= <GND>
+ledr8 <= <GND>
+ledr9 <= <GND>
+
+

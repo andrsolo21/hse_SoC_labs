@@ -1,0 +1,159 @@
+Determining the location of the ModelSim executable...
+
+Using: d:/intelfpga_lite/17.1/modelsim_ase/win32aloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off try2 -c try2 --vector_source="D:/repos/hse_SoC_labs/II/Lab5_2/Waveform1.vwf" --testbench_file="D:/repos/hse_SoC_labs/II/Lab5_2/simulation/qsim/Waveform1.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Thu May 07 23:06:19 2020
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off try2 -c try2 --vector_source=D:/repos/hse_SoC_labs/II/Lab5_2/Waveform1.vwf --testbench_file=D:/repos/hse_SoC_labs/II/Lab5_2/simulation/qsim/Waveform1.vwf.vt
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/repos/hse_SoC_labs/II/Lab5_2/simulation/qsim/" try2 -c try2
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Thu May 07 23:06:22 2020
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/repos/hse_SoC_labs/II/Lab5_2/simulation/qsim/ try2 -c try2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file try2.vo in folder "D:/repos/hse_SoC_labs/II/Lab5_2/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4734 megabytes
+    Info: Processing ended: Thu May 07 23:06:26 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+D:/repos/hse_SoC_labs/II/Lab5_2/simulation/qsim/try2.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+d:/intelfpga_lite/17.1/modelsim_ase/win32aloem//vsim -c -do try2.do
+
+Reading D:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+
+# do try2.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:30 on May 07,2020
+# vlog -work work try2.vo 
+
+# -- Compiling module dop
+# 
+# Top level modules:
+# 	dop
+# End time: 23:06:30 on May 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:30 on May 07,2020
+# vlog -work work Waveform1.vwf.vt 
+
+# -- Compiling module dop_vlg_vec_tst
+# 
+# Top level modules:
+# 	dop_vlg_vec_tst
+# End time: 23:06:30 on May 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.dop_vlg_vec_tst 
+# Start time: 23:06:31 on May 07,2020
+# Loading work.dop_vlg_vec_tst
+# Loading work.dop
+# Loading altera_ver.dffeas
+# Loading sv_std.std
+# Loading altera_lnsim_ver.generic_m10k
+# Loading altera_lnsim_ver.altera_lnsim_functions
+# Loading altera_lnsim_ver.common_28nm_ram_block
+# Loading altera_lnsim_ver.common_28nm_ram_register
+# Loading altera_lnsim_ver.common_28nm_ram_pulse_generator
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (1) does not match connection size (26) for port 'az'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (16) does not match connection size (19) for port 'by'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (8) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) try2.vo(991): [PCDPC] - Port size (64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(38).
+#    Time: 0 ps  Iteration: 0  Instance: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac  File: nofile
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac // File: nofile
+# ** Warning: (vsim-3015) (): [PCDPC] - Port size () does not match connection size () for .
+#    Time: 0 ps  Iteration: 0  Protected: /dop_vlg_vec_tst/i1/\mult_inst|lpm_mult_component|auto_generated|Mult0~mac // File: nofile
+# after#25
+# ** Note: $finish    : Waveform1.vwf.vt(50)
+#    Time: 1 us  Iteration: 0  Instance: /dop_vlg_vec_tst
+# End time: 23:06:33 on May 07,2020, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 8
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading D:/repos/hse_SoC_labs/II/Lab5_2/Waveform1.vwf...
+
+Reading D:/repos/hse_SoC_labs/II/Lab5_2/simulation/qsim/try2.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to D:/repos/hse_SoC_labs/II/Lab5_2/simulation/qsim/try2_20200507230633.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

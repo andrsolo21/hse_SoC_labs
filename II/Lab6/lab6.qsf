@@ -1,0 +1,151 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# Date created = 01:23:56  May 09, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		lab6_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C8GES
+set_global_assignment -name TOP_LEVEL_ENTITY pipemult
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "01:23:56  MAY 09, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name QIP_FILE mult.qip
+set_global_assignment -name QIP_FILE ram.qip
+set_global_assignment -name BDF_FILE pipemult.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_P11 -to clk
+set_instance_assignment -name IO_STANDARD "1.8 V" -to clk
+set_location_assignment PIN_N2 -to dataa[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to dataa[7]
+set_location_assignment PIN_M9 -to dataa[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to dataa[6]
+set_location_assignment PIN_N3 -to dataa[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to dataa[5]
+set_location_assignment PIN_M8 -to dataa[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to dataa[4]
+set_location_assignment PIN_P5 -to dataa[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to dataa[3]
+set_location_assignment PIN_N5 -to dataa[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to dataa[2]
+set_location_assignment PIN_P4 -to dataa[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to dataa[1]
+set_location_assignment PIN_N4 -to dataa[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to dataa[0]
+set_location_assignment PIN_N8 -to datab[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to datab[7]
+set_location_assignment PIN_T2 -to datab[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to datab[6]
+set_location_assignment PIN_R5 -to datab[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to datab[5]
+set_location_assignment PIN_T1 -to datab[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to datab[4]
+set_location_assignment PIN_R4 -to datab[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to datab[3]
+set_location_assignment PIN_M1 -to datab[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to datab[2]
+set_location_assignment PIN_R3 -to datab[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to datab[1]
+set_location_assignment PIN_P3 -to datab[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to datab[0]
+set_location_assignment PIN_W5 -to q[15]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[15]
+set_location_assignment PIN_V4 -to q[14]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[14]
+set_location_assignment PIN_W6 -to q[13]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[13]
+set_location_assignment PIN_V5 -to q[12]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[12]
+set_location_assignment PIN_U6 -to q[11]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[11]
+set_location_assignment PIN_Y1 -to q[10]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[10]
+set_location_assignment PIN_U7 -to q[9]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[9]
+set_location_assignment PIN_Y2 -to q[8]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[8]
+set_location_assignment PIN_W4 -to q[7]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[7]
+set_location_assignment PIN_AA1 -to q[6]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[6]
+set_location_assignment PIN_W3 -to q[5]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[5]
+set_location_assignment PIN_AA2 -to q[4]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[4]
+set_location_assignment PIN_V7 -to q[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[3]
+set_location_assignment PIN_Y5 -to q[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[2]
+set_location_assignment PIN_V8 -to q[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[1]
+set_location_assignment PIN_Y6 -to q[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to q[0]
+set_location_assignment PIN_W8 -to rdaddress[4]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to rdaddress[4]
+set_location_assignment PIN_Y3 -to rdaddress[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to rdaddress[3]
+set_location_assignment PIN_W7 -to rdaddress[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to rdaddress[2]
+set_location_assignment PIN_AB3 -to rdaddress[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to rdaddress[1]
+set_location_assignment PIN_W10 -to rdaddress[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to rdaddress[0]
+set_location_assignment PIN_AB2 -to wraddress[4]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to wraddress[4]
+set_location_assignment PIN_W9 -to wraddress[3]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to wraddress[3]
+set_location_assignment PIN_Y8 -to wraddress[2]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to wraddress[2]
+set_location_assignment PIN_P9 -to wraddress[1]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to wraddress[1]
+set_location_assignment PIN_Y7 -to wraddress[0]
+set_instance_assignment -name IO_STANDARD "1.8 V" -to wraddress[0]
+set_location_assignment PIN_R9 -to wren
+set_instance_assignment -name IO_STANDARD "1.8 V" -to wren
+set_location_assignment PIN_H2 -to ~ALTERA_TMS~
+set_location_assignment PIN_G2 -to ~ALTERA_TCK~
+set_location_assignment PIN_L4 -to ~ALTERA_TDI~
+set_location_assignment PIN_M5 -to ~ALTERA_TDO~
+set_location_assignment PIN_H10 -to ~ALTERA_CONFIG_SEL~
+set_location_assignment PIN_H9 -to ~ALTERA_nCONFIG~
+set_location_assignment PIN_G9 -to ~ALTERA_nSTATUS~
+set_location_assignment PIN_F8 -to ~ALTERA_CONF_DONE~
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

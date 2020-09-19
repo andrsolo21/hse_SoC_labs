@@ -1,0 +1,239 @@
+%!TEX TS-program = xelatex
+
+% Шаблон документа LaTeX создан в 2018 году
+% Алексеем Подчезерцевым
+% В качестве исходных использованы шаблоны
+% 	Данилом Фёдоровых (danil@fedorovykh.ru) 
+%		https://www.writelatex.com/coursera/latex/5.2.2
+%	LaTeX-шаблон для русской кандидатской диссертации и её автореферата.
+%		https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template
+
+\documentclass[a4paper,14pt]{article}
+
+\input{data/preambular.tex}
+\begin{document} % конец преамбулы, начало документа
+\input{data/title_04.tex}
+\tableofcontents
+\pagebreak
+
+\section{Цель работы}
+
+Моделирование работы дешифратора, изучение карт Карно.
+
+\section{Задание}
+
+\begin{enumerate}
+\item Используя логические элементы спроектировать схему и исследовать работу (снять временную характеристику и таблицу задержек) одноразрядного двухразрядного и четырехразрядного сумматора.
+
+\item Построить временную диаграмму и выполнить моделирование в режимах Functional и Time. Сравнить и обосновать полученные результаты.
+
+\item Запрограммировать учебную плату и продемонстрировать результаты работы на макете.
+
+\item На базе сумматора построить вычитатель. Спроектировать его схему и исследовать работу (снять временную диаграмму и таблицу задержек)
+
+\item Построить временную диаграмму и выполнить моделирование в режимах Functional и Time. Сравнить и обосновать полученные результаты.
+
+\item Запрограммировать учебную плату и продемонстрировать результаты работы на макете.
+\end{enumerate}
+
+\section{Выполнение работы}
+
+\subsection{Исследование сумматоров}
+
+\subsubsection{Проектирование одноразрядного сумматора}
+
+Построим схему одноразрядного сумматора (рис. \ref{fig:041bdf}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/04_1_bdf}
+	\caption{Схема одноразрядного сумматора}
+	\label{fig:041bdf}
+\end{figure}
+
+
+Для одноразрядного сумматора получились следующие задержки (рис. \ref{fig:041time}). Временные задержки были получены следующим образом: TimeQuest Timing Analysis > Write SDC file.. > Report Datasheet.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/04_1_time}
+	\caption{Временные задержки одноразрядного сумматора}
+	\label{fig:041time}
+\end{figure}
+
+В файле с временными диаграммами добавим все пины и установим входные значения. Полученные временные диаграммы рис. \ref{fig:041wvf}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{image/04_1_wvf}
+	\caption{Временные диаграммы одноразрядного сумматора}
+	\label{fig:041wvf}
+\end{figure}
+
+ Моделирование в режимах Functional и Time не отличается, т.к. на приведенной частоте задержек не видно.
+ 
+ Загрузим на плату и протестируем работу (рис. \ref{fig:041foto})
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=0.7\linewidth]{image/lab4/2020-03-1412-17-02.JPG}
+ 	\caption{Фото рабочей платы}
+ 	\label{fig:041foto}
+ \end{figure}
+
+(Фото есть т.к. работа выполнялась до карантина)
+
+Далее соберем данную схему как один логический элемент. Для этого необходимо выбрать в меню File Create/Update, далее Create Symbol Files for Current File (рис. \ref{fig:04createsymbol}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/04_create_symbol}
+	\caption{Создание логического элемента}
+	\label{fig:04createsymbol}
+\end{figure}
+
+В открывшемся окне сохраняем элемент.
+
+\subsubsection{Исследование работы двухразрядного сумматора}
+
+В меню логических элементов найдем созданный нами одноразрядный сумматор. На его основе спроектируем двухразрядный сумматор (рис. \ref{fig:042sumbdf}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab4/04_2sum_bdf}
+	\caption{Схема двухразрядного сумматора}
+	\label{fig:042sumbdf}
+\end{figure}
+
+По описанному ранее порядку найдем временные задержки (рис. \ref{fig:042sumtime}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab4/04_2sum_time}
+	\caption{Временные задержки двухразрядного сумматора}
+	\label{fig:042sumtime}
+\end{figure}
+
+В результате моделирования временная диаграмма имеет следующий вид (рис. \ref{fig:042sumwvf}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{image/lab4/04_2sum_wvf}
+	\caption{Временная диаграмма для двухразрядного сумматора}
+	\label{fig:042sumwvf}
+\end{figure}
+
+ Моделирование в режимах Functional и Time не отличается, т.к. на приведенной частоте задержек не видно.
+ 
+ Загрузим на плату и протестируем работу (рис. \ref{fig:042foto})
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=0.7\linewidth]{image/lab4/2020-03-1412-17-16.JPG}
+ 	\caption{Фото рабочей платы}
+ 	\label{fig:042foto}
+ \end{figure}
+
+\subsubsection{Исследование работы четырехразрядного сумматора}
+
+В меню логических элементов найдем созданный нами одноразрядный сумматор. На его основе спроектируем четырехразрядный сумматор (рис. \ref{fig:044sumbdf}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab4/04_4sum_bdf}
+	\caption{Схема четырехразрядного сумматора}
+	\label{fig:044sumbdf}
+\end{figure}
+
+По описанному ранее порядку найдем временные задержки (рис. \ref{fig:044sumtime}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab4/04_4sum_time}
+	\caption{Временные задержки четырехразрядного сумматора}
+	\label{fig:044sumtime}
+\end{figure}
+
+
+В результате моделирования временная диаграмма имеет следующий вид (рис. \ref{fig:044sumwvf}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{image/lab4/04_4sum_wvf}
+	\caption{Временная диаграмма для четырехразрядного сумматора}
+	\label{fig:044sumwvf}
+\end{figure}
+
+Моделирование в режимах Functional и Time не отличается, т.к. на приведенной частоте задержек не видно.
+
+Загрузим на плату и протестируем работу (рис. \ref{fig:044foto})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab4/2020-03-1412-17-14.JPG}
+	\caption{Фото рабочей платы}
+	\label{fig:044foto}
+\end{figure}
+
+\subsection{Исследование работы четырехразрядного вычитателя}
+
+Есть 2 числа $A = a_3a_2a_1a_0$ и $B = b_3b_2b_1b_0$, необходимо получить разность чисел $B$ и $A$ $S = s_3s_2s_1s_0$. $p$ - сигнал переполнения.
+
+Для реализации вычитателя необходимо инвертировать вычитаемое число и вход переноса из предыдущего разряда подать логическую единицу.
+
+В меню логических элементов найдем созданный нами одноразрядный сумматор. На его основе спроектируем четырехразрядный вычитатель (рис. \ref{fig:044vicbdf}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab4/04_4vic_bdf}
+	\caption{Схема четырехразрядного вычитателя}
+	\label{fig:044vicbdf}
+\end{figure}
+
+
+По описанному ранее порядку найдем временные задержки (рис. \ref{fig:044victime}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab4/04_4vic_time}
+	\caption{Временные задержки четырехразрядного вычитателя}
+	\label{fig:044victime}
+\end{figure}
+
+В результате моделирования временная диаграмма имеет следующий вид (рис. \ref{fig:044vicwvf}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{image/lab4/04_4vic_wvf}
+	\caption{Временная диаграмма для четырехразрядного вычитателя}
+	\label{fig:044vicwvf}
+\end{figure}
+
+
+Моделирование в режимах Functional и Time не отличается, т.к. на приведенной частоте задержек не видно.
+
+Загрузим на плату и протестируем работу (рис. \ref{fig:044vicfoto})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{image/lab4/2020-03-1413-07-27.JPG}
+	\caption{Фото рабочей платы}
+	\label{fig:044vicfoto}
+\end{figure}
+
+\section{Вывод}
+В ходе проделанной работы был создан одноразрядный сумматор.
+На его основе были спроектированы двухразрядный и четырехразрядный сумматоры, а также четырехразрядный вычитатель.
+При помощи TimeQuest Timing Analysis были получены задержки для кажого входного параметра.
+Схема была протестированы при помощи WaveForm, а также удалось загрузить схему на плату и протестировать работоспособность программы на плате.
+
+\newpage 
+\renewcommand{\refname}{{\normalsize СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}} 
+\centering 
+\begin{thebibliography}{9} 
+	\addcontentsline{toc}{section}{\refname} 
+	\bibitem{sql} Vijayakumar P., Vijayalakshmi V., Zayaraz G. Comparative study of hyperelliptic curve cryptosystem over prime field and its survey //International Journal of Hybrid Information Technology. – 2014. – Т. 7. – №. 1. – С. 137-146.
+	\bibitem{sql} Антонов А., Филиппов А., Золотухо Р. Средства системной отладки САПР Quartus II //Компоненты и технологии. – 2008. – №. 89.
+\end{thebibliography}
+
+\end{document} % конец документа

@@ -1,0 +1,16 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Задание}{3}{section.1}
+\contentsline {section}{\numberline {2}Краткие теоретические сведения}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Что такое идеальный диод?}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}ВАХ реального полупроводникового диода}{3}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}$V_{\gamma }$(гамма) -- напряжение порога проводимости.}{4}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}$I_{D\_MAX}$ -- максимальный ток через диод при прямом включении.}{4}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}$I_{OP}$ -- обратный ток утечки.}{5}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}$PIV$ (Peak Inverse Voltage) -- Напряжение пробоя.}{5}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Паразитическая емкость PN-перехода.}{5}{subsubsection.2.2.5}
+\contentsline {subsection}{\numberline {2.3}Приближенные модели диодов}{6}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Приближенная модель диода <<идеальный диод + $V_{\gamma }$>>}{6}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Приближенная модель диода <<идеальный диод + $V_{\gamma } + r_D$>>}{6}{subsubsection.2.3.2}
+\contentsline {section}{\numberline {3}Выполнение работы}{7}{section.3}
+\contentsline {section}{\numberline {4}Выводы по работе}{8}{section.4}
+\contentsline {section}{\numberline {5}Контрольные вопросы}{9}{section.5}

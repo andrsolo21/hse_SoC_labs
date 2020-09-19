@@ -1,0 +1,179 @@
+Flow report for lab8
+Wed May 20 16:27:42 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Wed May 20 16:27:31 2020       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; lab8                                        ;
+; Top-level Entity Name              ; prod                                        ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C7G                              ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 240 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 238 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 43 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 43                                          ;
+; Total pins                         ; 43 / 360 ( 12 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/20/2020 16:26:10 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab8                ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 31573052425134.158998116909748         ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; timer_counter_s.bsf                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; timer_counter_s_inst.v                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; timer_counter_s_bb.v                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; timer_comp_s1.bsf                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; timer_comp_s1_inst.v                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; timer_comp_s1_bb.v                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; constant_50m.bsf                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; constant_50m_inst.v                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; constant_50m_bb.v                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; constant_25m.bsf                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; constant_25m_inst.v                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; constant_25m_bb.v                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; counter_timer.bsf                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; counter_timer_inst.v                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; counter_timer_bb.v                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; compare_timer.bsf                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; compare_timer_inst.v                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; compare_timer_bb.v                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; zero.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; zero_inst.v                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; zero_bb.v                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; target_value.bsf                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; target_value_inst.v                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; target_value_bb.v                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; counter_delay.bsf                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; counter_delay_inst.v                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; counter_delay_bb.v                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; compare_delay.bsf                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; compare_delay_inst.v                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; compare_delay_bb.v                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; delay_1.bsf                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; delay_1_inst.v                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; delay_1_bb.v                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; delay_x.bsf                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; delay_x_inst.v                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; delay_x_bb.v                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; adder.bsf                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; adder_inst.v                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; adder_bb.v                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; decode.bsf                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; decode_inst.v                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; decode_bb.v                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; mux_my.bsf                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; mux_my_inst.v                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; mux_my_bb.v                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; bin_const.bsf                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; bin_const_inst.v                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; bin_const_bb.v                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; devide_t.bsf                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; devide_t_inst.v                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; devide_t_bb.v                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; shift_reg.bsf                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; shift_reg_inst.v                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; shift_reg_bb.v                         ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; prod        ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; prod        ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; prod        ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; prod                                   ; lab8          ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:39     ; 1.0                     ; 4784 MB             ; 00:01:03                           ;
+; Fitter                    ; 00:00:28     ; 1.0                     ; 5385 MB             ; 00:00:29                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 4686 MB             ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.1                     ; 4807 MB             ; 00:00:06                           ;
+; Total                     ; 00:01:25     ; --                      ; --                  ; 00:01:45                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-R29N18L  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-R29N18L  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-R29N18L  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-R29N18L  ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab8 -c lab8
+quartus_fit --read_settings_files=off --write_settings_files=off lab8 -c lab8
+quartus_asm --read_settings_files=off --write_settings_files=off lab8 -c lab8
+quartus_sta lab8 -c lab8
+
+
+

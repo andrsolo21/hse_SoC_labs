@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/repos/hse_SoC_labs/II/lab8/simulation/qsim
+vdevider
+Z1 !s110 1589902473
+!i10b 1
+!s100 PR;DN7nV:2m0g[FK_j@0I0
+I3e>Yj9HdlTi127Yh9PR[>2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1589902471
+Z3 8lab8.vo
+Z4 Flab8.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1589902473.000000
+Z8 !s107 lab8.vo|
+Z9 !s90 -work|work|lab8.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vdevider_vlg_vec_tst
+R1
+!i10b 1
+!s100 H075<z[ZQlX>Z^a^c4zD:0
+IOAC=We12?1ldU[EZcM3Q90
+R2
+R0
+w1589902470
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+vhard_block
+Z13 !s110 1589975106
+!i10b 1
+!s100 R6Z984o@I;dNjITH^Eg9m0
+I<nOG>ScF:XKMNBDTFmZ^d3
+R2
+R0
+Z14 w1589975104
+R3
+R4
+L0 4566
+R6
+r1
+!s85 0
+31
+Z15 !s108 1589975105.000000
+R8
+R9
+!i113 1
+R10
+R11
+vlab8
+!s110 1589968418
+!i10b 1
+!s100 90;cY?88zT<oBgdzc8N5<0
+I6X8X44E;=cb3T503ohMN`0
+R2
+R0
+w1589968414
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1589968418.000000
+R8
+R9
+!i113 1
+R10
+R11
+vlab8_vlg_vec_tst
+!s110 1589968419
+!i10b 1
+!s100 HQ3XU4lz8LX>m;G1C8Si<2
+ITKdoNUHT<Ck0U_DCPa9CX2
+R2
+R0
+w1589968411
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1589968419.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+vprod
+R13
+!i10b 1
+!s100 7>>6eV9TnMJYZGZ@88c<@1
+ImmKmoLT<[i2]Yf>Q8NS`G0
+R2
+R0
+R14
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+R15
+R8
+R9
+!i113 1
+R10
+R11
+vprod_vlg_vec_tst
+R13
+!i10b 1
+!s100 YUOZ`bM8<dKhOUQ8Lzz=63
+IJ65@<3O@DNkj<dAVYP1En2
+R2
+R0
+w1589975102
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1589975106.000000
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R10
+R11

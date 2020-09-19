@@ -1,0 +1,6 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Задание}{3}{section.1}
+\contentsline {section}{\numberline {2}Краткие теоретические сведения}{3}{section.2}
+\contentsline {section}{\numberline {3}Выполнение работы}{8}{section.3}
+\contentsline {section}{\numberline {4}Выводы по работе}{9}{section.4}
+\contentsline {section}{\numberline {5}Контрольные вопросы}{10}{section.5}

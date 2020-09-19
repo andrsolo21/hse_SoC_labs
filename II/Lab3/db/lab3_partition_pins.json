@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ledr0",
+					"strict" : false
+				},
+				{
+					"name" : "pin_9",
+					"strict" : false
+				},
+				{
+					"name" : "pin_2",
+					"strict" : false
+				},
+				{
+					"name" : "pin_0",
+					"strict" : false
+				},
+				{
+					"name" : "pin_1",
+					"strict" : false
+				},
+				{
+					"name" : "pin_8",
+					"strict" : false
+				},
+				{
+					"name" : "pin_7",
+					"strict" : false
+				},
+				{
+					"name" : "pin_11",
+					"strict" : false
+				},
+				{
+					"name" : "pin_5",
+					"strict" : false
+				},
+				{
+					"name" : "pin_6",
+					"strict" : false
+				},
+				{
+					"name" : "pin_3",
+					"strict" : false
+				},
+				{
+					"name" : "pin_4",
+					"strict" : false
+				},
+				{
+					"name" : "pin_10",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

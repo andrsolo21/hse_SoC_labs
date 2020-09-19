@@ -1,0 +1,46 @@
+%!TEX TS-program = xelatex
+
+% Шаблон документа LaTeX создан в 2018 году
+% Алексеем Подчезерцевым
+% В качестве исходных использованы шаблоны
+% 	Данилом Фёдоровых (danil@fedorovykh.ru) 
+%		https://www.writelatex.com/coursera/latex/5.2.2
+%	LaTeX-шаблон для русской кандидатской диссертации и её автореферата.
+%		https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template
+
+\documentclass[a4paper,14pt]{article}
+
+\input{data/preambular.tex}
+\begin{document} % конец преамбулы, начало документа
+\input{data/title_01.tex}
+\tableofcontents
+\pagebreak
+
+Известно длительность импульса ($\tau_u$ = 50 мск), длина волны МРЛС (λ = 0,1 м), мощность излучения (Р = 200 МВт), коэффициент направленного действия передающей антенны (G = 45000), минимальная энергия принимаемого сигнала (Э$_{пр.min} = 10^{-18}$),  ЭПР цели ( σ$_{ц}$= 0,01 м2).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{screenshot001}
+	\caption{}
+	\label{fig:screenshot001}
+\end{figure}
+
+$$\text{Э}_c = P \cdot \tau_u$$
+
+$$S_A = \dfrac{\lambda^2}{4\pi}\cdot G$$
+
+$$D_{max} = \sqrt[4]{\dfrac{\text{Э}_c \cdot G \cdot S_A \cdot \sigma_{\text{ц}}}{(4\pi)^2 \cdot  \text{Э}_{np.min}}} $$
+
+\pagebreak
+
+
+$$\text{Э}_c = P \cdot \tau_u = 200 \cdot 10^{6} \text{ Вт} \cdot 50 \cdot 10^{-6} \text{ с} = 10^4 \text{ Дж}$$
+
+$$S_A = \dfrac{\lambda^2}{4\pi}\cdot G = \dfrac{(0,1 \text{ м} )^2}{4\cdot 3,14}\cdot 45000 = 35,83\text{ м}^2$$
+
+$$D_{max} = \sqrt[4]{\dfrac{\text{Э}_c \cdot G \cdot S_A \cdot \sigma_{\text{ц}}}{(4\pi)^2 \cdot  \text{Э}_{np.min}}} = 
+\sqrt[4]{\dfrac{10^4 \text{ Дж} \cdot 45000 \cdot 35,83 \text{ м}^2 \cdot 0,01 \text{ м}^2}{(4 \cdot 3,14)^2 \cdot  10^{-18} \text{ Дж}}} = 
+1,005 \cdot 10^6 \text{ м}
+$$
+
+
+\end{document} % конец документа

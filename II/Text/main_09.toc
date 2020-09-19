@@ -1,0 +1,13 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Идея проекта}{3}{section.1}
+\contentsline {section}{\numberline {2}Какую проблему может решить проект }{4}{section.2}
+\contentsline {section}{\numberline {3} Кто заказчик проекта}{4}{section.3}
+\contentsline {section}{\numberline {4} Кто потребитель}{5}{section.4}
+\contentsline {section}{\numberline {5} Какая польза будет от проекта}{5}{section.5}
+\contentsline {section}{\numberline {6} Опишите аналоги и их преимущества/недостатки (со ссылками). Чем ваш проект отличается. Его новизна.}{6}{section.6}
+\contentsline {section}{\numberline {7} Приведите общую схему проекта}{6}{section.7}
+\contentsline {section}{\numberline {8} Опишите составляющие устройства/разработки}{6}{section.8}
+\contentsline {section}{\numberline {9} Опишите основные шаги для достижения результата проекта}{7}{section.9}
+\contentsline {section}{\numberline {10} Опишите какая аппаратная платформа нужна для реализации проекта}{7}{section.10}
+\contentsline {section}{\numberline {11} Оцените затраты на реализацию проекта (материальные/временные)}{8}{section.11}
+\contentsline {section}{{\relax \fontsize {14.4}{17}\selectfont \abovedisplayskip 14\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus4\p@ \belowdisplayshortskip 7\p@ plus4\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 6\p@ plus2.5\p@ minus\p@ \topsep 12\p@ plus5\p@ minus7\p@ \itemsep 6\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 6\p@ plus2.5\p@ minus\p@ \topsep 12\p@ plus5\p@ minus7\p@ \itemsep 6\p@ plus2.5\p@ minus\p@ СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}}{9}{section*.3}

@@ -1,0 +1,1967 @@
+Analysis & Synthesis report for lab8
+Wed May 20 16:26:48 2020
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: devider:inst18|timer_comp_s1:inst1|lpm_compare:LPM_COMPARE_component
+ 12. Parameter Settings for User Entity Instance: devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component
+ 13. Parameter Settings for User Entity Instance: devider:inst18|BUSMUX:inst3
+ 14. Parameter Settings for User Entity Instance: devider:inst18|constant_50m:inst4|lpm_constant:LPM_CONSTANT_component
+ 15. Parameter Settings for User Entity Instance: devider:inst18|constant_25m:inst5|lpm_constant:LPM_CONSTANT_component
+ 16. Parameter Settings for User Entity Instance: compare_timer:inst3|lpm_compare:LPM_COMPARE_component
+ 17. Parameter Settings for User Entity Instance: counter_timer:inst1|lpm_counter:LPM_COUNTER_component
+ 18. Parameter Settings for User Entity Instance: BUSMUX:inst4
+ 19. Parameter Settings for User Entity Instance: target_value:inst6|lpm_constant:LPM_CONSTANT_component
+ 20. Parameter Settings for User Entity Instance: zero:inst5|lpm_constant:LPM_CONSTANT_component
+ 21. Parameter Settings for User Entity Instance: shift_reg:inst17|lpm_shiftreg:LPM_SHIFTREG_component
+ 22. Parameter Settings for User Entity Instance: Block1:inst_dec_1|mux_my:inst|lpm_mux:LPM_MUX_component
+ 23. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst2
+ 24. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst12
+ 25. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst13
+ 26. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst14
+ 27. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst15
+ 28. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst16
+ 29. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst17
+ 30. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst3
+ 31. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst4
+ 32. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst5
+ 33. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst6
+ 34. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst7
+ 35. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst8
+ 36. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst9
+ 37. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst10
+ 38. Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst11
+ 39. Parameter Settings for User Entity Instance: devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component
+ 40. Parameter Settings for User Entity Instance: delay_x:inst9|lpm_constant:LPM_CONSTANT_component
+ 41. Parameter Settings for User Entity Instance: devide_t:inst15|lpm_divide:LPM_DIVIDE_component
+ 42. Parameter Settings for User Entity Instance: delay_x:inst16|lpm_constant:LPM_CONSTANT_component
+ 43. Parameter Settings for User Entity Instance: Block1:inst_dec_2|mux_my:inst|lpm_mux:LPM_MUX_component
+ 44. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst2
+ 45. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst12
+ 46. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst13
+ 47. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst14
+ 48. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst15
+ 49. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst16
+ 50. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst17
+ 51. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst3
+ 52. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst4
+ 53. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst5
+ 54. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst6
+ 55. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst7
+ 56. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst8
+ 57. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst9
+ 58. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst10
+ 59. Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst11
+ 60. Parameter Settings for User Entity Instance: Block1:inst7|mux_my:inst|lpm_mux:LPM_MUX_component
+ 61. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst2
+ 62. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst12
+ 63. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst13
+ 64. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst14
+ 65. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst15
+ 66. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst16
+ 67. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst17
+ 68. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst3
+ 69. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst4
+ 70. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst5
+ 71. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst6
+ 72. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst7
+ 73. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst8
+ 74. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst9
+ 75. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst10
+ 76. Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst11
+ 77. Parameter Settings for User Entity Instance: Block1:inst8|mux_my:inst|lpm_mux:LPM_MUX_component
+ 78. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst2
+ 79. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst12
+ 80. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst13
+ 81. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst14
+ 82. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst15
+ 83. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst16
+ 84. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst17
+ 85. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst3
+ 86. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst4
+ 87. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst5
+ 88. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst6
+ 89. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst7
+ 90. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst8
+ 91. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst9
+ 92. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst10
+ 93. Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst11
+ 94. lpm_shiftreg Parameter Settings by Entity Instance
+ 95. Post-Synthesis Netlist Statistics for Top Partition
+ 96. Elapsed Time Per Partition
+ 97. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 20 16:26:48 2020       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; lab8                                        ;
+; Top-level Entity Name              ; prod                                        ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 238                                         ;
+;     Total combinational functions  ; 238                                         ;
+;     Dedicated logic registers      ; 43                                          ;
+; Total registers                    ; 43                                          ;
+; Total pins                         ; 43                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                                      ; prod               ; lab8               ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
+; timer_counter_s.v                ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/timer_counter_s.v                                ;         ;
+; timer_comp_s1.v                  ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/timer_comp_s1.v                                  ;         ;
+; constant_50m.v                   ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/constant_50m.v                                   ;         ;
+; constant_25m.v                   ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/constant_25m.v                                   ;         ;
+; devider.bdf                      ; yes             ; User Block Diagram/Schematic File  ; D:/repos/hse_SoC_labs/II/lab8/devider.bdf                                      ;         ;
+; counter_timer.v                  ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/counter_timer.v                                  ;         ;
+; compare_timer.v                  ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/compare_timer.v                                  ;         ;
+; zero.v                           ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/zero.v                                           ;         ;
+; target_value.v                   ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/target_value.v                                   ;         ;
+; delay_x.v                        ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/delay_x.v                                        ;         ;
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; D:/repos/hse_SoC_labs/II/lab8/Block1.bdf                                       ;         ;
+; mux_my.v                         ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/mux_my.v                                         ;         ;
+; devide_t.v                       ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/devide_t.v                                       ;         ;
+; prod.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/repos/hse_SoC_labs/II/lab8/prod.bdf                                         ;         ;
+; shift_reg.v                      ; yes             ; User Wizard-Generated File         ; D:/repos/hse_SoC_labs/II/lab8/shift_reg.v                                      ;         ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
+; comptree.inc                     ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/comptree.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc          ;         ;
+; db/cmpr_22g.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/cmpr_22g.tdf                                  ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; db/cntr_52i.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/cntr_52i.tdf                                  ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf              ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; db/mux_f7c.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/mux_f7c.tdf                                   ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.tdf        ;         ;
+; db/cmpr_u1g.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/cmpr_u1g.tdf                                  ;         ;
+; db/cntr_osf.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/cntr_osf.tdf                                  ;         ;
+; db/mux_d7c.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/mux_d7c.tdf                                   ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
+; db/mux_s7c.tdf                   ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/mux_s7c.tdf                                   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; db/lpm_divide_12s.tdf            ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/lpm_divide_12s.tdf                            ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/sign_div_unsign_olh.tdf                       ;         ;
+; db/alt_u_div_qhe.tdf             ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/alt_u_div_qhe.tdf                             ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/add_sub_t3c.tdf                               ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction        ; D:/repos/hse_SoC_labs/II/lab8/db/add_sub_u3c.tdf                               ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 238   ;
+;                                             ;       ;
+; Total combinational functions               ; 238   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 65    ;
+;     -- 3 input functions                    ; 60    ;
+;     -- <=2 input functions                  ; 113   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 134   ;
+;     -- arithmetic mode                      ; 104   ;
+;                                             ;       ;
+; Total registers                             ; 43    ;
+;     -- Dedicated logic registers            ; 43    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 43    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; rtl~0 ;
+; Maximum fan-out                             ; 43    ;
+; Total fan-out                               ; 861   ;
+; Average fan-out                             ; 2.35  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                     ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                            ; Entity Name         ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |prod                                        ; 238 (4)             ; 43 (2)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 43   ; 0            ; 0          ; |prod                                                                                                                                          ; prod                ; work         ;
+;    |Block1:inst7|                            ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst7                                                                                                                             ; Block1              ; work         ;
+;       |mux_my:inst|                          ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst7|mux_my:inst                                                                                                                 ; mux_my              ; work         ;
+;          |lpm_mux:LPM_MUX_component|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst7|mux_my:inst|lpm_mux:LPM_MUX_component                                                                                       ; lpm_mux             ; work         ;
+;             |mux_s7c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst7|mux_my:inst|lpm_mux:LPM_MUX_component|mux_s7c:auto_generated                                                                ; mux_s7c             ; work         ;
+;    |Block1:inst8|                            ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst8                                                                                                                             ; Block1              ; work         ;
+;       |mux_my:inst|                          ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst8|mux_my:inst                                                                                                                 ; mux_my              ; work         ;
+;          |lpm_mux:LPM_MUX_component|         ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst8|mux_my:inst|lpm_mux:LPM_MUX_component                                                                                       ; lpm_mux             ; work         ;
+;             |mux_s7c:auto_generated|         ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst8|mux_my:inst|lpm_mux:LPM_MUX_component|mux_s7c:auto_generated                                                                ; mux_s7c             ; work         ;
+;    |Block1:inst_dec_1|                       ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst_dec_1                                                                                                                        ; Block1              ; work         ;
+;       |mux_my:inst|                          ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst_dec_1|mux_my:inst                                                                                                            ; mux_my              ; work         ;
+;          |lpm_mux:LPM_MUX_component|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst_dec_1|mux_my:inst|lpm_mux:LPM_MUX_component                                                                                  ; lpm_mux             ; work         ;
+;             |mux_s7c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst_dec_1|mux_my:inst|lpm_mux:LPM_MUX_component|mux_s7c:auto_generated                                                           ; mux_s7c             ; work         ;
+;    |Block1:inst_dec_2|                       ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst_dec_2                                                                                                                        ; Block1              ; work         ;
+;       |mux_my:inst|                          ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst_dec_2|mux_my:inst                                                                                                            ; mux_my              ; work         ;
+;          |lpm_mux:LPM_MUX_component|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst_dec_2|mux_my:inst|lpm_mux:LPM_MUX_component                                                                                  ; lpm_mux             ; work         ;
+;             |mux_s7c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|Block1:inst_dec_2|mux_my:inst|lpm_mux:LPM_MUX_component|mux_s7c:auto_generated                                                           ; mux_s7c             ; work         ;
+;    |compare_timer:inst3|                     ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|compare_timer:inst3                                                                                                                      ; compare_timer       ; work         ;
+;       |lpm_compare:LPM_COMPARE_component|    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|compare_timer:inst3|lpm_compare:LPM_COMPARE_component                                                                                    ; lpm_compare         ; work         ;
+;          |cmpr_u1g:auto_generated|           ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|compare_timer:inst3|lpm_compare:LPM_COMPARE_component|cmpr_u1g:auto_generated                                                            ; cmpr_u1g            ; work         ;
+;    |counter_timer:inst1|                     ; 10 (0)              ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|counter_timer:inst1                                                                                                                      ; counter_timer       ; work         ;
+;       |lpm_counter:LPM_COUNTER_component|    ; 10 (0)              ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|counter_timer:inst1|lpm_counter:LPM_COUNTER_component                                                                                    ; lpm_counter         ; work         ;
+;          |cntr_osf:auto_generated|           ; 10 (10)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated                                                            ; cntr_osf            ; work         ;
+;    |devide_t:inst15|                         ; 73 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst15                                                                                                                          ; devide_t            ; work         ;
+;       |lpm_divide:LPM_DIVIDE_component|      ; 73 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst15|lpm_divide:LPM_DIVIDE_component                                                                                          ; lpm_divide          ; work         ;
+;          |lpm_divide_12s:auto_generated|     ; 73 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst15|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated                                                            ; lpm_divide_12s      ; work         ;
+;             |sign_div_unsign_olh:divider|    ; 73 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst15|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated|sign_div_unsign_olh:divider                                ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_qhe:divider|       ; 73 (73)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst15|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider          ; alt_u_div_qhe       ; work         ;
+;    |devide_t:inst_devider_qr|                ; 67 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst_devider_qr                                                                                                                 ; devide_t            ; work         ;
+;       |lpm_divide:LPM_DIVIDE_component|      ; 67 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_12s:auto_generated|     ; 67 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated                                                   ; lpm_divide_12s      ; work         ;
+;             |sign_div_unsign_olh:divider|    ; 67 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_qhe:divider|       ; 67 (67)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider ; alt_u_div_qhe       ; work         ;
+;    |devider:inst18|                          ; 45 (0)              ; 30 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devider:inst18                                                                                                                           ; devider             ; work         ;
+;       |timer_comp_s1:inst1|                  ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devider:inst18|timer_comp_s1:inst1                                                                                                       ; timer_comp_s1       ; work         ;
+;          |lpm_compare:LPM_COMPARE_component| ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devider:inst18|timer_comp_s1:inst1|lpm_compare:LPM_COMPARE_component                                                                     ; lpm_compare         ; work         ;
+;             |cmpr_22g:auto_generated|        ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devider:inst18|timer_comp_s1:inst1|lpm_compare:LPM_COMPARE_component|cmpr_22g:auto_generated                                             ; cmpr_22g            ; work         ;
+;       |timer_counter_s:inst|                 ; 30 (0)              ; 30 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devider:inst18|timer_counter_s:inst                                                                                                      ; timer_counter_s     ; work         ;
+;          |lpm_counter:LPM_COUNTER_component| ; 30 (0)              ; 30 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component                                                                    ; lpm_counter         ; work         ;
+;             |cntr_52i:auto_generated|        ; 30 (30)             ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated                                            ; cntr_52i            ; work         ;
+;    |shift_reg:inst17|                        ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|shift_reg:inst17                                                                                                                         ; shift_reg           ; work         ;
+;       |lpm_shiftreg:LPM_SHIFTREG_component|  ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |prod|shift_reg:inst17|lpm_shiftreg:LPM_SHIFTREG_component                                                                                     ; lpm_shiftreg        ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                         ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------+-------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                           ; IP Include File   ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------+-------------------+
+; Altera ; LPM_COUNTER  ; 17.1    ; N/A          ; N/A          ; |prod|counter_timer:inst1                 ; counter_timer.v   ;
+; Altera ; LPM_COMPARE  ; 17.1    ; N/A          ; N/A          ; |prod|compare_timer:inst3                 ; compare_timer.v   ;
+; Altera ; LPM_CONSTANT ; 17.1    ; N/A          ; N/A          ; |prod|zero:inst5                          ; zero.v            ;
+; Altera ; LPM_CONSTANT ; 17.1    ; N/A          ; N/A          ; |prod|target_value:inst6                  ; target_value.v    ;
+; Altera ; LPM_MUX      ; 17.1    ; N/A          ; N/A          ; |prod|Block1:inst7|mux_my:inst            ; mux_my.v          ;
+; Altera ; LPM_MUX      ; 17.1    ; N/A          ; N/A          ; |prod|Block1:inst8|mux_my:inst            ; mux_my.v          ;
+; Altera ; LPM_CONSTANT ; 17.1    ; N/A          ; N/A          ; |prod|delay_x:inst9                       ; delay_x.v         ;
+; Altera ; LPM_DIVIDE   ; 17.1    ; N/A          ; N/A          ; |prod|devide_t:inst15                     ; devide_t.v        ;
+; Altera ; LPM_CONSTANT ; 17.1    ; N/A          ; N/A          ; |prod|delay_x:inst16                      ; delay_x.v         ;
+; Altera ; LPM_SHIFTREG ; 17.1    ; N/A          ; N/A          ; |prod|shift_reg:inst17                    ; shift_reg.v       ;
+; Altera ; LPM_COUNTER  ; 17.1    ; N/A          ; N/A          ; |prod|devider:inst18|timer_counter_s:inst ; timer_counter_s.v ;
+; Altera ; LPM_COMPARE  ; 17.1    ; N/A          ; N/A          ; |prod|devider:inst18|timer_comp_s1:inst1  ; timer_comp_s1.v   ;
+; Altera ; LPM_CONSTANT ; 17.1    ; N/A          ; N/A          ; |prod|devider:inst18|constant_50m:inst4   ; constant_50m.v    ;
+; Altera ; LPM_CONSTANT ; 17.1    ; N/A          ; N/A          ; |prod|devider:inst18|constant_25m:inst5   ; constant_25m.v    ;
+; Altera ; LPM_MUX      ; 17.1    ; N/A          ; N/A          ; |prod|Block1:inst_dec_1|mux_my:inst       ; mux_my.v          ;
+; Altera ; LPM_MUX      ; 17.1    ; N/A          ; N/A          ; |prod|Block1:inst_dec_2|mux_my:inst       ; mux_my.v          ;
+; Altera ; LPM_DIVIDE   ; 17.1    ; N/A          ; N/A          ; |prod|devide_t:inst_devider_qr            ; devide_t.v        ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------+-------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++-----------------------------------------------------------------+--------------------+
+; Register name                                                   ; Reason for Removal ;
++-----------------------------------------------------------------+--------------------+
+; shift_reg:inst17|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0..6] ; Merged with inst10 ;
+; Total Number of Removed Registers = 7                           ;                    ;
++-----------------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 43    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: devider:inst18|timer_comp_s1:inst1|lpm_compare:LPM_COMPARE_component ;
++------------------------+----------+-------------------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                                          ;
++------------------------+----------+-------------------------------------------------------------------------------+
+; lpm_width              ; 30       ; Signed Integer                                                                ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                                       ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                                       ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                                       ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                                       ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                                       ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                                            ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                                          ;
+; DEVICE_FAMILY          ; MAX 10   ; Untyped                                                                       ;
+; CBXI_PARAMETER         ; cmpr_22g ; Untyped                                                                       ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                                ;
++------------------------+----------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+-----------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                        ;
++------------------------+-------------+-----------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                              ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                                              ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                     ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                     ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                     ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                     ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                     ;
+; DEVICE_FAMILY          ; MAX 10      ; Untyped                                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                          ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                          ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                     ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                     ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                     ;
+; CBXI_PARAMETER         ; cntr_52i    ; Untyped                                                                     ;
++------------------------+-------------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: devider:inst18|BUSMUX:inst3 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 30    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: devider:inst18|constant_50m:inst4|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+----------------------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                                       ;
++--------------------+------------------+----------------------------------------------------------------------------+
+; LPM_WIDTH          ; 30               ; Signed Integer                                                             ;
+; LPM_CVALUE         ; 49999999         ; Signed Integer                                                             ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                                    ;
+; CBXI_PARAMETER     ; lpm_constant_117 ; Untyped                                                                    ;
++--------------------+------------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: devider:inst18|constant_25m:inst5|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+----------------------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                                       ;
++--------------------+------------------+----------------------------------------------------------------------------+
+; LPM_WIDTH          ; 30               ; Signed Integer                                                             ;
+; LPM_CVALUE         ; 24999999         ; Signed Integer                                                             ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                                    ;
+; CBXI_PARAMETER     ; lpm_constant_9u6 ; Untyped                                                                    ;
++--------------------+------------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: compare_timer:inst3|lpm_compare:LPM_COMPARE_component ;
++------------------------+----------+----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                           ;
++------------------------+----------+----------------------------------------------------------------+
+; lpm_width              ; 10       ; Signed Integer                                                 ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                        ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                        ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                        ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                             ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                           ;
+; DEVICE_FAMILY          ; MAX 10   ; Untyped                                                        ;
+; CBXI_PARAMETER         ; cmpr_u1g ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                 ;
++------------------------+----------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter_timer:inst1|lpm_counter:LPM_COUNTER_component ;
++------------------------+-----------+---------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                          ;
++------------------------+-----------+---------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                ;
+; LPM_WIDTH              ; 10        ; Signed Integer                                                ;
+; LPM_DIRECTION          ; DEFAULT   ; Untyped                                                       ;
+; LPM_MODULUS            ; 0         ; Untyped                                                       ;
+; LPM_AVALUE             ; UNUSED    ; Untyped                                                       ;
+; LPM_SVALUE             ; UNUSED    ; Untyped                                                       ;
+; LPM_PORT_UPDOWN        ; PORT_USED ; Untyped                                                       ;
+; DEVICE_FAMILY          ; MAX 10    ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL    ; Untyped                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48        ; CARRY_CHAIN_LENGTH                                            ;
+; NOT_GATE_PUSH_BACK     ; ON        ; NOT_GATE_PUSH_BACK                                            ;
+; CARRY_CNT_EN           ; SMART     ; Untyped                                                       ;
+; LABWIDE_SCLR           ; ON        ; Untyped                                                       ;
+; USE_NEW_VERSION        ; TRUE      ; Untyped                                                       ;
+; CBXI_PARAMETER         ; cntr_osf  ; Untyped                                                       ;
++------------------------+-----------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst4 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 10    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: target_value:inst6|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+-------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                        ;
++--------------------+------------------+-------------------------------------------------------------+
+; LPM_WIDTH          ; 10               ; Signed Integer                                              ;
+; LPM_CVALUE         ; 21               ; Signed Integer                                              ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                     ;
+; CBXI_PARAMETER     ; lpm_constant_pi6 ; Untyped                                                     ;
++--------------------+------------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: zero:inst5|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+-----------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                ;
++--------------------+------------------+-----------------------------------------------------+
+; LPM_WIDTH          ; 10               ; Signed Integer                                      ;
+; LPM_CVALUE         ; 0                ; Signed Integer                                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                             ;
+; CBXI_PARAMETER     ; lpm_constant_ji6 ; Untyped                                             ;
++--------------------+------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shift_reg:inst17|lpm_shiftreg:LPM_SHIFTREG_component ;
++------------------------+--------+-----------------------------------------------------------------+
+; Parameter Name         ; Value  ; Type                                                            ;
++------------------------+--------+-----------------------------------------------------------------+
+; LPM_WIDTH              ; 8      ; Signed Integer                                                  ;
+; LPM_DIRECTION          ; LEFT   ; Untyped                                                         ;
+; LPM_AVALUE             ; UNUSED ; Untyped                                                         ;
+; LPM_SVALUE             ; UNUSED ; Untyped                                                         ;
+; DEVICE_FAMILY          ; MAX 10 ; Untyped                                                         ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                                                  ;
++------------------------+--------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|mux_my:inst|lpm_mux:LPM_MUX_component ;
++------------------------+---------+-------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                              ;
++------------------------+---------+-------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                    ;
+; LPM_WIDTH              ; 8       ; Signed Integer                                                    ;
+; LPM_SIZE               ; 16      ; Signed Integer                                                    ;
+; LPM_WIDTHS             ; 4       ; Signed Integer                                                    ;
+; LPM_PIPELINE           ; 0       ; Untyped                                                           ;
+; CBXI_PARAMETER         ; mux_s7c ; Untyped                                                           ;
+; DEVICE_FAMILY          ; MAX 10  ; Untyped                                                           ;
++------------------------+---------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst2 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 11000000         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_6a4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst12 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10001000         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_394 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst13 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10000011         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_u84 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst14 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 11000110         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_ca4 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst15 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10100001         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_5a4 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst16 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10000110         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_194 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst17 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10001110         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_ga4 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst3 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 11111001         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_ia4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst4 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10100100         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_8a4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst5 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10110000         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_7a4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst6 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10011001         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_594 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst7 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10010010         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_v84 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst8 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10000010         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_t84 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst9 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 11111000         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_ha4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst10 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10000000         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_r84 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_1|lpm_constant:inst11 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10010000         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_s84 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+-------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                        ;
++------------------------+----------------+-------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Signed Integer                                              ;
+; LPM_WIDTHD             ; 8              ; Signed Integer                                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_12s ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                              ;
++------------------------+----------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay_x:inst9|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                   ;
++--------------------+------------------+--------------------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                                         ;
+; LPM_CVALUE         ; 3                ; Signed Integer                                         ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                ;
+; CBXI_PARAMETER     ; lpm_constant_tf6 ; Untyped                                                ;
++--------------------+------------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: devide_t:inst15|lpm_divide:LPM_DIVIDE_component ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Signed Integer                                     ;
+; LPM_WIDTHD             ; 8              ; Signed Integer                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_12s ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: delay_x:inst16|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+---------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                    ;
++--------------------+------------------+---------------------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                                          ;
+; LPM_CVALUE         ; 3                ; Signed Integer                                          ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                 ;
+; CBXI_PARAMETER     ; lpm_constant_tf6 ; Untyped                                                 ;
++--------------------+------------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|mux_my:inst|lpm_mux:LPM_MUX_component ;
++------------------------+---------+-------------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                              ;
++------------------------+---------+-------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                                    ;
+; LPM_WIDTH              ; 8       ; Signed Integer                                                    ;
+; LPM_SIZE               ; 16      ; Signed Integer                                                    ;
+; LPM_WIDTHS             ; 4       ; Signed Integer                                                    ;
+; LPM_PIPELINE           ; 0       ; Untyped                                                           ;
+; CBXI_PARAMETER         ; mux_s7c ; Untyped                                                           ;
+; DEVICE_FAMILY          ; MAX 10  ; Untyped                                                           ;
++------------------------+---------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst2 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 11000000         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_6a4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst12 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10001000         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_394 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst13 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10000011         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_u84 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst14 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 11000110         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_ca4 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst15 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10100001         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_5a4 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst16 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10000110         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_194 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst17 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10001110         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_ga4 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst3 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 11111001         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_ia4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst4 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10100100         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_8a4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst5 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10110000         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_7a4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst6 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10011001         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_594 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst7 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10010010         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_v84 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst8 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 10000010         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_t84 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst9 ;
++--------------------+------------------+-------------------------------------------+
+; Parameter Name     ; Value            ; Type                                      ;
++--------------------+------------------+-------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                            ;
+; LPM_CVALUE         ; 11111000         ; Unsigned Binary                           ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                   ;
+; CBXI_PARAMETER     ; lpm_constant_ha4 ; Untyped                                   ;
++--------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst10 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10000000         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_r84 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst_dec_2|lpm_constant:inst11 ;
++--------------------+------------------+--------------------------------------------+
+; Parameter Name     ; Value            ; Type                                       ;
++--------------------+------------------+--------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                             ;
+; LPM_CVALUE         ; 10010000         ; Unsigned Binary                            ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                    ;
+; CBXI_PARAMETER     ; lpm_constant_s84 ; Untyped                                    ;
++--------------------+------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|mux_my:inst|lpm_mux:LPM_MUX_component ;
++------------------------+---------+--------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                         ;
++------------------------+---------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 8       ; Signed Integer                                               ;
+; LPM_SIZE               ; 16      ; Signed Integer                                               ;
+; LPM_WIDTHS             ; 4       ; Signed Integer                                               ;
+; LPM_PIPELINE           ; 0       ; Untyped                                                      ;
+; CBXI_PARAMETER         ; mux_s7c ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX 10  ; Untyped                                                      ;
++------------------------+---------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst2 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 11000000         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_6a4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst12 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10001000         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_394 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst13 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10000011         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_u84 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst14 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 11000110         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_ca4 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst15 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10100001         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_5a4 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst16 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10000110         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_194 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst17 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10001110         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_ga4 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst3 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 11111001         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_ia4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst4 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10100100         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_8a4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst5 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10110000         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_7a4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst6 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10011001         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_594 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst7 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10010010         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_v84 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst8 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10000010         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_t84 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst9 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 11111000         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_ha4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst10 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10000000         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_r84 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst7|lpm_constant:inst11 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10010000         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_s84 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|mux_my:inst|lpm_mux:LPM_MUX_component ;
++------------------------+---------+--------------------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                         ;
++------------------------+---------+--------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                               ;
+; LPM_WIDTH              ; 8       ; Signed Integer                                               ;
+; LPM_SIZE               ; 16      ; Signed Integer                                               ;
+; LPM_WIDTHS             ; 4       ; Signed Integer                                               ;
+; LPM_PIPELINE           ; 0       ; Untyped                                                      ;
+; CBXI_PARAMETER         ; mux_s7c ; Untyped                                                      ;
+; DEVICE_FAMILY          ; MAX 10  ; Untyped                                                      ;
++------------------------+---------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst2 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 11000000         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_6a4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst12 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10001000         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_394 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst13 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10000011         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_u84 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst14 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 11000110         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_ca4 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst15 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10100001         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_5a4 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst16 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10000110         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_194 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst17 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10001110         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_ga4 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst3 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 11111001         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_ia4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst4 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10100100         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_8a4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst5 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10110000         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_7a4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst6 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10011001         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_594 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst7 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10010010         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_v84 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst8 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 10000010         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_t84 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst9 ;
++--------------------+------------------+--------------------------------------+
+; Parameter Name     ; Value            ; Type                                 ;
++--------------------+------------------+--------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                       ;
+; LPM_CVALUE         ; 11111000         ; Unsigned Binary                      ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                              ;
+; CBXI_PARAMETER     ; lpm_constant_ha4 ; Untyped                              ;
++--------------------+------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst10 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10000000         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_r84 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block1:inst8|lpm_constant:inst11 ;
++--------------------+------------------+---------------------------------------+
+; Parameter Name     ; Value            ; Type                                  ;
++--------------------+------------------+---------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                        ;
+; LPM_CVALUE         ; 10010000         ; Unsigned Binary                       ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                               ;
+; CBXI_PARAMETER     ; lpm_constant_s84 ; Untyped                               ;
++--------------------+------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; lpm_shiftreg Parameter Settings by Entity Instance                                ;
++----------------------------+------------------------------------------------------+
+; Name                       ; Value                                                ;
++----------------------------+------------------------------------------------------+
+; Number of entity instances ; 1                                                    ;
+; Entity Instance            ; shift_reg:inst17|lpm_shiftreg:LPM_SHIFTREG_component ;
+;     -- LPM_WIDTH           ; 8                                                    ;
+;     -- LPM_DIRECTION       ; LEFT                                                 ;
++----------------------------+------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 43                          ;
+; cycloneiii_ff         ; 43                          ;
+;     SLD               ; 30                          ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 240                         ;
+;     arith             ; 104                         ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 80                          ;
+;         3 data inputs ; 17                          ;
+;     normal            ; 136                         ;
+;         0 data inputs ; 11                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 65                          ;
+;                       ;                             ;
+; Max LUT depth         ; 18.30                       ;
+; Average LUT depth     ; 11.80                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed May 20 16:26:08 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab8 -c lab8
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file timer_counter_s.v
+    Info (12023): Found entity 1: timer_counter_s File: D:/repos/hse_SoC_labs/II/lab8/timer_counter_s.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file timer_comp_s1.v
+    Info (12023): Found entity 1: timer_comp_s1 File: D:/repos/hse_SoC_labs/II/lab8/timer_comp_s1.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file constant_50m.v
+    Info (12023): Found entity 1: constant_50m File: D:/repos/hse_SoC_labs/II/lab8/constant_50m.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file constant_25m.v
+    Info (12023): Found entity 1: constant_25m File: D:/repos/hse_SoC_labs/II/lab8/constant_25m.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file devider.bdf
+    Info (12023): Found entity 1: devider
+Info (12021): Found 1 design units, including 1 entities, in source file lab8.bdf
+    Info (12023): Found entity 1: lab8
+Info (12021): Found 1 design units, including 1 entities, in source file counter_timer.v
+    Info (12023): Found entity 1: counter_timer File: D:/repos/hse_SoC_labs/II/lab8/counter_timer.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file compare_timer.v
+    Info (12023): Found entity 1: compare_timer File: D:/repos/hse_SoC_labs/II/lab8/compare_timer.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file zero.v
+    Info (12023): Found entity 1: zero File: D:/repos/hse_SoC_labs/II/lab8/zero.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file target_value.v
+    Info (12023): Found entity 1: target_value File: D:/repos/hse_SoC_labs/II/lab8/target_value.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file counter_delay.v
+    Info (12023): Found entity 1: counter_delay File: D:/repos/hse_SoC_labs/II/lab8/counter_delay.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file compare_delay.v
+    Info (12023): Found entity 1: compare_delay File: D:/repos/hse_SoC_labs/II/lab8/compare_delay.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file delay_1.v
+    Info (12023): Found entity 1: delay_1 File: D:/repos/hse_SoC_labs/II/lab8/delay_1.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file delay_x.v
+    Info (12023): Found entity 1: delay_x File: D:/repos/hse_SoC_labs/II/lab8/delay_x.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file trash.bdf
+    Info (12023): Found entity 1: trash
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: adder File: D:/repos/hse_SoC_labs/II/lab8/adder.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file decode.v
+    Info (12023): Found entity 1: decode File: D:/repos/hse_SoC_labs/II/lab8/decode.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file block1.bdf
+    Info (12023): Found entity 1: Block1
+Info (12021): Found 1 design units, including 1 entities, in source file ledr.v
+    Info (12023): Found entity 1: led7 File: D:/repos/hse_SoC_labs/II/lab8/ledr.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file mux_my.v
+    Info (12023): Found entity 1: mux_my File: D:/repos/hse_SoC_labs/II/lab8/mux_my.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file bin_const.v
+    Info (12023): Found entity 1: bin_const File: D:/repos/hse_SoC_labs/II/lab8/bin_const.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file devide_t.v
+    Info (12023): Found entity 1: devide_t File: D:/repos/hse_SoC_labs/II/lab8/devide_t.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file prod.bdf
+    Info (12023): Found entity 1: prod
+Info (12021): Found 1 design units, including 1 entities, in source file shift_reg.v
+    Info (12023): Found entity 1: shift_reg File: D:/repos/hse_SoC_labs/II/lab8/shift_reg.v Line: 39
+Info (12127): Elaborating entity "prod" for the top level hierarchy
+Warning (275011): Block or symbol "TFF" of instance "inst10" overlaps another block or symbol
+Warning (275011): Block or symbol "Block1" of instance "inst7" overlaps another block or symbol
+Info (12128): Elaborating entity "devider" for hierarchy "devider:inst18"
+Info (12128): Elaborating entity "timer_comp_s1" for hierarchy "devider:inst18|timer_comp_s1:inst1"
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "devider:inst18|timer_comp_s1:inst1|lpm_compare:LPM_COMPARE_component" File: D:/repos/hse_SoC_labs/II/lab8/timer_comp_s1.v Line: 62
+Info (12130): Elaborated megafunction instantiation "devider:inst18|timer_comp_s1:inst1|lpm_compare:LPM_COMPARE_component" File: D:/repos/hse_SoC_labs/II/lab8/timer_comp_s1.v Line: 62
+Info (12133): Instantiated megafunction "devider:inst18|timer_comp_s1:inst1|lpm_compare:LPM_COMPARE_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/timer_comp_s1.v Line: 62
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_COMPARE"
+    Info (12134): Parameter "lpm_width" = "30"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_22g.tdf
+    Info (12023): Found entity 1: cmpr_22g File: D:/repos/hse_SoC_labs/II/lab8/db/cmpr_22g.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_22g" for hierarchy "devider:inst18|timer_comp_s1:inst1|lpm_compare:LPM_COMPARE_component|cmpr_22g:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_compare.tdf Line: 280
+Info (12128): Elaborating entity "timer_counter_s" for hierarchy "devider:inst18|timer_counter_s:inst"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component" File: D:/repos/hse_SoC_labs/II/lab8/timer_counter_s.v Line: 68
+Info (12130): Elaborated megafunction instantiation "devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component" File: D:/repos/hse_SoC_labs/II/lab8/timer_counter_s.v Line: 68
+Info (12133): Instantiated megafunction "devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/timer_counter_s.v Line: 68
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "30"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_52i.tdf
+    Info (12023): Found entity 1: cntr_52i File: D:/repos/hse_SoC_labs/II/lab8/db/cntr_52i.tdf Line: 25
+Info (12128): Elaborating entity "cntr_52i" for hierarchy "devider:inst18|timer_counter_s:inst|lpm_counter:LPM_COUNTER_component|cntr_52i:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 258
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "devider:inst18|BUSMUX:inst3"
+Info (12130): Elaborated megafunction instantiation "devider:inst18|BUSMUX:inst3"
+Info (12133): Instantiated megafunction "devider:inst18|BUSMUX:inst3" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "30"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "devider:inst18|BUSMUX:inst3|lpm_mux:$00000" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "devider:inst18|BUSMUX:inst3|lpm_mux:$00000", which is child of megafunction instantiation "devider:inst18|BUSMUX:inst3" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_f7c.tdf
+    Info (12023): Found entity 1: mux_f7c File: D:/repos/hse_SoC_labs/II/lab8/db/mux_f7c.tdf Line: 22
+Info (12128): Elaborating entity "mux_f7c" for hierarchy "devider:inst18|BUSMUX:inst3|lpm_mux:$00000|mux_f7c:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "constant_50m" for hierarchy "devider:inst18|constant_50m:inst4"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "devider:inst18|constant_50m:inst4|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/constant_50m.v Line: 48
+Info (12130): Elaborated megafunction instantiation "devider:inst18|constant_50m:inst4|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/constant_50m.v Line: 48
+Info (12133): Instantiated megafunction "devider:inst18|constant_50m:inst4|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/constant_50m.v Line: 48
+    Info (12134): Parameter "lpm_cvalue" = "49999999"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "30"
+Info (12128): Elaborating entity "constant_25m" for hierarchy "devider:inst18|constant_25m:inst5"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "devider:inst18|constant_25m:inst5|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/constant_25m.v Line: 48
+Info (12130): Elaborated megafunction instantiation "devider:inst18|constant_25m:inst5|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/constant_25m.v Line: 48
+Info (12133): Instantiated megafunction "devider:inst18|constant_25m:inst5|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/constant_25m.v Line: 48
+    Info (12134): Parameter "lpm_cvalue" = "24999999"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "30"
+Info (12128): Elaborating entity "compare_timer" for hierarchy "compare_timer:inst3"
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "compare_timer:inst3|lpm_compare:LPM_COMPARE_component" File: D:/repos/hse_SoC_labs/II/lab8/compare_timer.v Line: 62
+Info (12130): Elaborated megafunction instantiation "compare_timer:inst3|lpm_compare:LPM_COMPARE_component" File: D:/repos/hse_SoC_labs/II/lab8/compare_timer.v Line: 62
+Info (12133): Instantiated megafunction "compare_timer:inst3|lpm_compare:LPM_COMPARE_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/compare_timer.v Line: 62
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_COMPARE"
+    Info (12134): Parameter "lpm_width" = "10"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_u1g.tdf
+    Info (12023): Found entity 1: cmpr_u1g File: D:/repos/hse_SoC_labs/II/lab8/db/cmpr_u1g.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_u1g" for hierarchy "compare_timer:inst3|lpm_compare:LPM_COMPARE_component|cmpr_u1g:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_compare.tdf Line: 280
+Info (12128): Elaborating entity "counter_timer" for hierarchy "counter_timer:inst1"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "counter_timer:inst1|lpm_counter:LPM_COUNTER_component" File: D:/repos/hse_SoC_labs/II/lab8/counter_timer.v Line: 66
+Info (12130): Elaborated megafunction instantiation "counter_timer:inst1|lpm_counter:LPM_COUNTER_component" File: D:/repos/hse_SoC_labs/II/lab8/counter_timer.v Line: 66
+Info (12133): Instantiated megafunction "counter_timer:inst1|lpm_counter:LPM_COUNTER_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/counter_timer.v Line: 66
+    Info (12134): Parameter "lpm_direction" = "UNUSED"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_USED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "10"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_osf.tdf
+    Info (12023): Found entity 1: cntr_osf File: D:/repos/hse_SoC_labs/II/lab8/db/cntr_osf.tdf Line: 25
+Info (12128): Elaborating entity "cntr_osf" for hierarchy "counter_timer:inst1|lpm_counter:LPM_COUNTER_component|cntr_osf:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 258
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst4"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst4"
+Info (12133): Instantiated megafunction "BUSMUX:inst4" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "10"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst4|lpm_mux:$00000" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "BUSMUX:inst4|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst4" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_d7c.tdf
+    Info (12023): Found entity 1: mux_d7c File: D:/repos/hse_SoC_labs/II/lab8/db/mux_d7c.tdf Line: 22
+Info (12128): Elaborating entity "mux_d7c" for hierarchy "BUSMUX:inst4|lpm_mux:$00000|mux_d7c:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "target_value" for hierarchy "target_value:inst6"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "target_value:inst6|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/target_value.v Line: 48
+Info (12130): Elaborated megafunction instantiation "target_value:inst6|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/target_value.v Line: 48
+Info (12133): Instantiated megafunction "target_value:inst6|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/target_value.v Line: 48
+    Info (12134): Parameter "lpm_cvalue" = "21"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "10"
+Info (12128): Elaborating entity "zero" for hierarchy "zero:inst5"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "zero:inst5|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/zero.v Line: 48
+Info (12130): Elaborated megafunction instantiation "zero:inst5|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/zero.v Line: 48
+Info (12133): Instantiated megafunction "zero:inst5|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/zero.v Line: 48
+    Info (12134): Parameter "lpm_cvalue" = "0"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "10"
+Info (12128): Elaborating entity "shift_reg" for hierarchy "shift_reg:inst17"
+Info (12128): Elaborating entity "lpm_shiftreg" for hierarchy "shift_reg:inst17|lpm_shiftreg:LPM_SHIFTREG_component" File: D:/repos/hse_SoC_labs/II/lab8/shift_reg.v Line: 66
+Info (12130): Elaborated megafunction instantiation "shift_reg:inst17|lpm_shiftreg:LPM_SHIFTREG_component" File: D:/repos/hse_SoC_labs/II/lab8/shift_reg.v Line: 66
+Info (12133): Instantiated megafunction "shift_reg:inst17|lpm_shiftreg:LPM_SHIFTREG_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/shift_reg.v Line: 66
+    Info (12134): Parameter "lpm_direction" = "LEFT"
+    Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
+    Info (12134): Parameter "lpm_width" = "8"
+Info (12128): Elaborating entity "Block1" for hierarchy "Block1:inst_dec_1"
+Info (12128): Elaborating entity "mux_my" for hierarchy "Block1:inst_dec_1|mux_my:inst"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "Block1:inst_dec_1|mux_my:inst|lpm_mux:LPM_MUX_component" File: D:/repos/hse_SoC_labs/II/lab8/mux_my.v Line: 108
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|mux_my:inst|lpm_mux:LPM_MUX_component" File: D:/repos/hse_SoC_labs/II/lab8/mux_my.v Line: 108
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|mux_my:inst|lpm_mux:LPM_MUX_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/mux_my.v Line: 108
+    Info (12134): Parameter "lpm_size" = "16"
+    Info (12134): Parameter "lpm_type" = "LPM_MUX"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widths" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_s7c.tdf
+    Info (12023): Found entity 1: mux_s7c File: D:/repos/hse_SoC_labs/II/lab8/db/mux_s7c.tdf Line: 22
+Info (12128): Elaborating entity "mux_s7c" for hierarchy "Block1:inst_dec_1|mux_my:inst|lpm_mux:LPM_MUX_component|mux_s7c:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst2"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst2"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst2" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "11000000"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst12"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst12"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst12" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10001000"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst13"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst13"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst13" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10000011"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst14"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst14"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst14" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "11000110"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst15"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst15"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst15" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10100001"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst16"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst16"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst16" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10000110"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst17"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst17"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst17" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10001110"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst3"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst3"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst3" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "11111001"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst4"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst4"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst4" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10100100"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst5"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst5"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst5" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10110000"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst6"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst6"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst6" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10011001"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst7"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst7"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst7" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10010010"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst8"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst8"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst8" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10000010"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst9"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst9"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst9" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "11111000"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst10"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst10"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst10" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10000000"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "Block1:inst_dec_1|lpm_constant:inst11"
+Info (12130): Elaborated megafunction instantiation "Block1:inst_dec_1|lpm_constant:inst11"
+Info (12133): Instantiated megafunction "Block1:inst_dec_1|lpm_constant:inst11" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "10010000"
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+Info (12128): Elaborating entity "devide_t" for hierarchy "devide_t:inst_devider_qr"
+Info (12128): Elaborating entity "lpm_divide" for hierarchy "devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component" File: D:/repos/hse_SoC_labs/II/lab8/devide_t.v Line: 62
+Info (12130): Elaborated megafunction instantiation "devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component" File: D:/repos/hse_SoC_labs/II/lab8/devide_t.v Line: 62
+Info (12133): Instantiated megafunction "devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/devide_t.v Line: 62
+    Info (12134): Parameter "lpm_drepresentation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_hint" = "LPM_REMAINDERPOSITIVE=TRUE"
+    Info (12134): Parameter "lpm_nrepresentation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_DIVIDE"
+    Info (12134): Parameter "lpm_widthd" = "8"
+    Info (12134): Parameter "lpm_widthn" = "10"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_12s.tdf
+    Info (12023): Found entity 1: lpm_divide_12s File: D:/repos/hse_SoC_labs/II/lab8/db/lpm_divide_12s.tdf Line: 24
+Info (12128): Elaborating entity "lpm_divide_12s" for hierarchy "devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated" File: d:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf Line: 147
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_olh File: D:/repos/hse_SoC_labs/II/lab8/db/sign_div_unsign_olh.tdf Line: 24
+Info (12128): Elaborating entity "sign_div_unsign_olh" for hierarchy "devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated|sign_div_unsign_olh:divider" File: D:/repos/hse_SoC_labs/II/lab8/db/lpm_divide_12s.tdf Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qhe.tdf
+    Info (12023): Found entity 1: alt_u_div_qhe File: D:/repos/hse_SoC_labs/II/lab8/db/alt_u_div_qhe.tdf Line: 26
+Info (12128): Elaborating entity "alt_u_div_qhe" for hierarchy "devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider" File: D:/repos/hse_SoC_labs/II/lab8/db/sign_div_unsign_olh.tdf Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
+    Info (12023): Found entity 1: add_sub_t3c File: D:/repos/hse_SoC_labs/II/lab8/db/add_sub_t3c.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_t3c" for hierarchy "devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_t3c:add_sub_0" File: D:/repos/hse_SoC_labs/II/lab8/db/alt_u_div_qhe.tdf Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
+    Info (12023): Found entity 1: add_sub_u3c File: D:/repos/hse_SoC_labs/II/lab8/db/add_sub_u3c.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_u3c" for hierarchy "devide_t:inst_devider_qr|lpm_divide:LPM_DIVIDE_component|lpm_divide_12s:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider|add_sub_u3c:add_sub_1" File: D:/repos/hse_SoC_labs/II/lab8/db/alt_u_div_qhe.tdf Line: 35
+Info (12128): Elaborating entity "delay_x" for hierarchy "delay_x:inst9"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "delay_x:inst9|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/delay_x.v Line: 48
+Info (12130): Elaborated megafunction instantiation "delay_x:inst9|lpm_constant:LPM_CONSTANT_component" File: D:/repos/hse_SoC_labs/II/lab8/delay_x.v Line: 48
+Info (12133): Instantiated megafunction "delay_x:inst9|lpm_constant:LPM_CONSTANT_component" with the following parameter: File: D:/repos/hse_SoC_labs/II/lab8/delay_x.v Line: 48
+    Info (12134): Parameter "lpm_cvalue" = "3"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "8"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dec_1[7]" is stuck at VCC
+    Warning (13410): Pin "dec_2[7]" is stuck at VCC
+    Warning (13410): Pin "hex_1[7]" is stuck at VCC
+    Warning (13410): Pin "hex_2[7]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 281 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 238 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Wed May 20 16:26:48 2020
+    Info: Elapsed time: 00:00:40
+    Info: Total CPU time (on all processors): 00:01:04
+
+
